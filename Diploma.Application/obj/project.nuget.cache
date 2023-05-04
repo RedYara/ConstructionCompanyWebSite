@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h+y2shyjLSFF14wouLgdk9EHVeF7pPpq/n8wh7IYPaJJ/iJ4DwZb7Am2+mHHHbMQhkZ8wG5Yqf7lLI22p3Dt2A==",
+  "dgSpecHash": "b2dQUDPhB2yoOcn3okIxteE+V4ahIpzLoeFwqOJVoB9DUvmvdxV2zKl+3MZe/dbW51eZ4fV7/vHvLXIBrmr8XA==",
   "success": true,
   "projectFilePath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Application\\Diploma.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yarud\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\yarud\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
-    "C:\\Users\\yarud\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\yarud\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\yarud\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.14\\microsoft.entityframeworkcore.6.0.14.nupkg.sha512",

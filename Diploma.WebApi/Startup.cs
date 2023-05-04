@@ -1,8 +1,7 @@
 ﻿using Diploma.Application;
 using Diploma.Application.Common.Mappings;
-using Microsoft.Extensions.FileProviders;
+using Diploma.Persistence;
 using System.Reflection;
-using Diploma.Persistence
 
 namespace Diploma.WebApi
 {
@@ -23,7 +22,6 @@ namespace Diploma.WebApi
                 config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
                 config.AddProfile(new AssemblyMappingProfile(typeof(Diploma.Application.DependencyInjection).Assembly));
             });
-
             services.AddPersistence(Configuration);
             services.AddApplication();
             services.AddControllersWithViews();
@@ -74,10 +72,6 @@ namespace Diploma.WebApi
 
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
-            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
-            {
-                DbInitializer.Initialize(serviceScope);
-            }
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
