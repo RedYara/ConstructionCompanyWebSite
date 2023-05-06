@@ -15,7 +15,8 @@ namespace Diploma.Persistence
             {
                 option.UseNpgsql(connectionString);
             });
-            services.AddIdentityCore<IdentityUser>(option => { }).AddDefaultTokenProviders().AddEntityFrameworkStores<DiplomaDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders().AddEntityFrameworkStores<DiplomaDbContext>();
+            //services.AddIdentityCore<IdentityUser>(option => { }).AddDefaultTokenProviders().AddEntityFrameworkStores<DiplomaDbContext>();
             services.AddScoped<IDiplomaDbContext>(provider =>
                 provider.GetService<DiplomaDbContext>());
             return services;

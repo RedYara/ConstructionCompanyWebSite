@@ -1,13 +1,16 @@
 ﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.House.CreateHouse;
+using Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery;
 using Diploma.Persistence;
 using Diploma.WebApi.Models.House;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Diploma.WebApi.Controllers
 {
     [Route("[controller]/[action]")]
+    [Authorize]
     public class HouseController : BaseController
     {
         private readonly IMapper _mapper;
@@ -20,11 +23,21 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var query = new GetHouseListQuery();
             var vm = await Mediator.Send(query);
 
+            return View(vm);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(int id)
+        {
+            var query = new GetHouseDetailsQuery();
+            var vm = await Mediator.Send(query); 
             return View(vm);
         }
 

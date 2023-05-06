@@ -1,6 +1,8 @@
 ﻿using Diploma.Application;
 using Diploma.Application.Common.Mappings;
+using Diploma.Domain;
 using Diploma.Persistence;
+using Microsoft.AspNetCore.Identity;
 using System.Reflection;
 
 namespace Diploma.WebApi
@@ -27,12 +29,12 @@ namespace Diploma.WebApi
             services.AddControllersWithViews();
 
             services.AddOptions();
-            //services.ConfigureApplicationCookie(options =>
-            //{
-            //    options.LoginPath = $"/Account/Login";
-            //    options.LogoutPath = $"/Account/Logout";
-            //    options.AccessDeniedPath = $"/Account/AccessDenied";
-            //});
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Account/Login";
+                options.LogoutPath = $"/Account/Logout";
+                options.AccessDeniedPath = $"/Account/AccessDenied";
+            });
 
             services.AddMvc();
             services.AddMemoryCache();
@@ -60,6 +62,16 @@ namespace Diploma.WebApi
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == 404)
+                {
+                    context.Request.Path = "/House/Index";
+                    await next();
+                }
+            });
 
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 

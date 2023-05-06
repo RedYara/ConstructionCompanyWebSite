@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\js\\accessdenied.js",
       "PackagePath": "staticwebassets\\js\\accessdenied.js"
     },
