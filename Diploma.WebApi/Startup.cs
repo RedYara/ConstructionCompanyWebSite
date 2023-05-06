@@ -52,15 +52,6 @@ namespace Diploma.WebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.Use(async (context, next) =>
-            {
-                await next();
-                if (context.Response.StatusCode == 404)
-                {
-                    context.Request.Path = "/v2/Web/App/Index";
-                    await next();
-                }
-            });
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors("AllowAll");
@@ -77,7 +68,7 @@ namespace Diploma.WebApi
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=App}/{action=Index}/{id?}");
+                    pattern: "{controller=House}/{action=Index}/{id?}");
 
             });
         }

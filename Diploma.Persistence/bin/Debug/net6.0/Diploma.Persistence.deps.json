@@ -641,6 +641,7 @@
           "Diploma.Domain": "1.0.0",
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.16"
         },
         "runtime": {

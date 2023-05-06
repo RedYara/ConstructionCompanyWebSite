@@ -10,7 +10,7 @@ namespace Diploma.Application.CQRS.Commands.Order.CreateOrder
         public CreateOrderCommandHandler(IDiplomaDbContext dbContext) => _dbContext = dbContext;
         public async Task<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
-            var order = new Order
+            var order = new Domain.Order
             {
                 CreationDate = DateTime.Now,
                 Description = request.Description,

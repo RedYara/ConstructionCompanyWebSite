@@ -22,4 +22,11 @@
 		<ProjectReference Include="..\Diploma.Persistence\Diploma.Persistence.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="Views\House\Create.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
 </Project>

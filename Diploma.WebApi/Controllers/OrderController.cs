@@ -1,5 +1,5 @@
 using AutoMapper;
-using Diploma.Application.CQRS.Queries.GetOrderListQuery;
+using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Mvc;
 

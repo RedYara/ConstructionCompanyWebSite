@@ -1034,7 +1034,8 @@
           "Diploma.Domain": "1.0.0",
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.14"
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "6.0.16"
         },
         "compile": {
           "bin/placeholder/Diploma.Application.dll": {}
@@ -1046,6 +1047,10 @@
       "Diploma.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16"
+        },
         "compile": {
           "bin/placeholder/Diploma.Domain.dll": {}
         },

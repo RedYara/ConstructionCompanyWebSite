@@ -1,0 +1,10 @@
+﻿@model Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery.HouseListVm
+
+@foreach(var house in Model.Houses)
+{
+    <h1>@house.Floors</h1>
+    <h1>@house.Name</h1>
+    <h1>@house.Desciption</h1>
+    <h1>@house.Size</h1>
+    <h1>@house.Square</h1>
+}

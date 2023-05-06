@@ -12,6 +12,7 @@ namespace Diploma.Persistence
         public DbSet<Order> Orders { get; set; }
         public DbSet<House> Houses { get; set; }
         public DbSet<Bath> Baths { get; set; }
+        public DbSet<User> Users { get; set; }
         public DiplomaDbContext(DbContextOptions<DiplomaDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

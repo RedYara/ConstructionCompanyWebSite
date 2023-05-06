@@ -44,6 +44,10 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text[]");
 
+                    b.Property<string>("Preview")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Size")
                         .IsRequired()
                         .HasColumnType("text");
@@ -77,12 +81,17 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text[]");
 
+                    b.Property<string>("Preview")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Size")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Square")
-                        .HasColumnType("integer");
+                    b.Property<string>("Square")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

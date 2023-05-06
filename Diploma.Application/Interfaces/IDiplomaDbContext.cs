@@ -8,6 +8,7 @@ namespace Diploma.Application.Interfaces
         DbSet<Order> Orders { get; set; }
         DbSet<House> Houses { get; set; }
         DbSet<Bath> Baths { get; set; }
+        DbSet<User> Users { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

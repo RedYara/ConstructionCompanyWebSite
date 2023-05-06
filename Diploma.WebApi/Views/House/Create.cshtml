@@ -1,0 +1,51 @@
+﻿@model Diploma.WebApi.Models.House.CreateHouseDto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Добавление дома</h3>
+
+<form asp-action="CreateHouse" enctype="multipart/form-data" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Floors, "Количество этажей")
+            @Html.TextBoxFor(m => m.Floors, "Укажите количество этажей", new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.Floors, "", new {@class = "text-danger"})
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Size, "Размерность дома")
+            @Html.TextBoxFor(m => m.Size, "Укажите размерность строения", new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.Size, "", new {@class = "text-danger"})
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Square, "Площадь дома")
+            @Html.TextBoxFor(m => m.Square, "Укажите площадь строения", new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.Square, "", new {@class = "text-danger"})
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Desciption, "Описание дома")
+            @Html.TextBoxFor(m => m.Desciption, "Укажите описание строения", new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.Desciption, "", new {@class = "text-danger"})
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Name, "Название дома")
+            @Html.TextBoxFor(m => m.Name, "Укажите название дома", new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.Name, "", new {@class = "text-danger"})
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.Preview, "Превью дома")
+            <input asp-for="Preview" type="file" accept="image/*" class="form-control" />
+            @Html.ValidationMessageFor(m => m.Preview, "", new {@class = "text-danger"})
+        </div>
+    </div>
+    <div class="row">
+        @Html.LabelFor(m => m.Photos, "Фотографии дома")
+        <input asp-for="Photos" type="file" multiple accept="image/*" class="form-control" />
+        @Html.ValidationMessageFor(m => m.Photos, "", new {@class = "text-danger"})
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить дом</button>
+
+</form>
