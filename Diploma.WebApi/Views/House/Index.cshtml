@@ -1,4 +1,5 @@
 ﻿@model Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery.HouseListVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -8,22 +9,78 @@
     <h1> ПРОЕКТ ГРУПП 116</h1>
 </div>
 <div class="container">
-    <p>Cray marfa artisan mlkshk tote bag. Freegan man braid master cleanse, pork belly retro artisan man bun hammock cronut quinoa roof party. Pop-up cardigan poutine meditation, affogato stumptown wolf fashion axe pug. Listicle paleo seitan keytar, twee kinfolk salvia meggings cold-pressed retro fingerstache typewriter organic cred. Tacos church-key gochujang, swag ugh squid put a bird on it VHS fingerstache ennui cardigan craft beer. Taxidermy beard you probably haven't heard of them four dollar toast PBR&B. Poutine lo-fi blue bottle, twee hammock sriracha godard.</p>
-
-    <p>Cardigan DIY dreamcatcher stumptown. Brunch yuccie swag, selfies leggings echo park quinoa cred squid cray typewriter. Tofu crucifix small batch typewriter irony, blog iPhone cold-pressed tousled pork belly polaroid. Direct trade heirloom deep v chicharrones kale chips. 8-bit viral kale chips food truck chillwave pork belly, art party cornhole hoodie banjo freegan. Tacos vice selfies, wolf tumblr vinyl affogato leggings sartorial forage plaid deep v cronut schlitz you probably haven't heard of them. Meditation normcore fap, pork belly 3 wolf moon pabst next level tacos gochujang franzen.</p>
-
-    <p>Ethical keytar slow-carb forage before they sold out meggings. Kombucha church-key kickstarter, pork belly scenester beard ugh ennui ramps gochujang pop-up chambray retro tacos messenger bag. Lo-fi pour-over tote bag migas brunch deep v shoreditch slow-carb before they sold out selfies. Meh hashtag kombucha ennui venmo. Lo-fi seitan normcore hoodie biodiesel celiac. Pickled master cleanse kitsch tofu, freegan vinyl letterpress. Tote bag banjo 90's, brunch XOXO retro cred seitan venmo master cleanse.</p>
+    <p>
+        Добро пожаловать в компанию "Проект групп 116". Мы - Ваш надежный партнер в строительстве домов. Мы являемся экспертами в области проектирования, строительства и ремонта жилых и коммерческих объектов, и мы гордимся тем, что уже на протяжении многих лет предоставляем качественные услуги нашим клиентам.
+    </p>
+    <p>
+        Наша компания состоит из профессионалов, которые имеют богатый опыт в строительстве и ремонте домов. Мы предлагаем свои услуги по проектированию и строительству жилых домов, дач, коттеджей, таунхаусов и других объектов, с использованием передовых технологий и материалов.
+    </p>
+    <p>
+        Мы уделяем особое внимание каждому клиенту, работая с ним в тесном сотрудничестве на всех этапах проекта, начиная от проектирования до финальной отделки. Мы гарантируем, что каждый наш проект будет выполнен в соответствии с Вашими требованиями и желаниями.
+    </p>
+    <p>
+        Мы предлагаем полный спектр услуг по строительству домов, начиная от проектирования до финальной отделки, включая установку отопительных систем, сантехники, электрики и мебели. Мы также предоставляем услуги по ремонту и реставрации домов, а также внутренней и внешней отделки.
+    </p>
+    <p>
+        Компания "Проект групп 116" является лидером в своей области благодаря нашей компетентности и качеству наших услуг. Мы гарантируем, что Ваш дом будет построен в срок и с высочайшим качеством, которое соответствует Вашим ожиданиям и бюджету. Обратитесь к нам и мы поможем Вам создать свой мечтательный дом.
+    </p>
+   
 </div>
 
-@foreach (var house in Model.Houses)
-{
-    <h1>@house.Floors</h1>
-    <h1>@house.Name</h1>
-    <h1>@house.Desciption</h1>
-    <h1>@house.Size</h1>
-    <h1>@house.Square</h1>
-}
-
+<div style="background-color:lightgray" class="mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mt-2">
+                <img src="~/images/badge.png" width="50%" height="80%"/>
+            </div>
+            <div class="col-md-3 mt-2">
+                <img src="~/images/shield.png" width="50%" height="80%" />
+            </div>
+            <div class="col-md-3 mt-2">
+                <img src="~/images/video-camera.png" width="50%" height="80%" />
+            </div>
+            <div class="col-md-3 mt-2">
+                <img src="~/images/like.png" width="50%" height="80%" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mt-2">
+                <h2>Опыт работы на рынке более 10 лет</h2>
+            </div>
+            <div class="col-md-3 mt-2">
+                <h2>Гарантия качества</h2>
+            </div>
+            <div class="col-md-3 mt-2">
+                <h2>Следим за порядком строительства</h2>
+            </div>
+            <div class="col-md-3 mt-2">
+                <h2>Более 90% положительных отзывов</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="mb-4" style="text-align:center">
+        <h1>Наш каталог проектов</h1>
+    </div>
+    <div class="image-grid">
+        @foreach (var house in Model.Houses)
+        {
+            <a class="image-container" href="details?id=@house.Id" style="text-decoration:none; color:black;">
+                <img src="data:image/png;base64, @house.Preview" />
+                <div class="info-box-right">
+                    @house.Name
+                </div>
+                <div class="info-box-description">
+                    @house.Desciption
+                </div>
+                <div class="info-box-bottom">
+                    <i class="fa-solid fa-arrow-up-right-dots"></i> @house.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @house.Size @house.Square м²
+                </div>
+            </a>
+        }
+    </div>
+</div>
 <script type="text/javascript">
     //$(document).ready(function () {
     //    $(window).on('scroll', function () {

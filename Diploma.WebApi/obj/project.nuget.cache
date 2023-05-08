@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WPTHdAf4j9/rpHIsOzuT2gvsXdlWCVBh8KIN3d2kLaPLb9R+G135Q3YmRspwKeoVWPom+oQ22FgWxkPocMfsng==",
+  "dgSpecHash": "lSPH+o6AQzcANS2wWwwMjBAKKEIGv2OtnaQpRVyujqa5jhk94byJrV0YT2ZNTrQCzO51QeDlvgjPBfayTYt/Eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\Diploma.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yarud\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\yarud\\.nuget\\packages\\coreadmin\\2.7.0\\coreadmin.2.7.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
@@ -52,6 +53,7 @@
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\yarud\\.nuget\\packages\\nonfactors.grid.core.mvc6\\7.1.0\\nonfactors.grid.core.mvc6.7.1.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\npgsql\\6.0.9\\npgsql.6.0.9.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.8\\npgsql.entityframeworkcore.postgresql.6.0.8.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

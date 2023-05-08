@@ -84,34 +84,34 @@ namespace WebApplication3.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //[AllowAnonymous]
-        //public async Task<IActionResult> RegisterUser(RegisterRequest registerData)
-        //{
-        //    var entity = await _userManager.FindByNameAsync(registerData.Username);
-        //    if (entity != null) return BadRequest("Пользователь с данным именем уже зарегистрирован");
-        //    else
-        //    {
-        //        await _roleManage.CreateAsync(new IdentityRole(roleName: "User"));
-        //        var user = new IdentityUser
-        //        {
-        //            Email = registerData.Email,
-        //            UserName = registerData.Username,
-        //            SecurityStamp = "dummyStamp",
-        //        };
-        //        var result = await _userManager.CreateAsync(user, registerData.Password);
-        //        if (result.Succeeded)
-        //        {
-        //            _userManager.AddToRoleAsync(user, "User").Wait();
-        //            return Redirect("Login");
-        //        }
-        //        else
-        //        {
-        //            return BadRequest("Could not create user.");
-        //        }
-        //    }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> RegisterUser(RegisterRequest registerData)
+        {
+            var entity = await _userManager.FindByNameAsync(registerData.Username);
+            if (entity != null) return BadRequest("Пользователь с данным именем уже зарегистрирован");
+            else
+            {
+                await _roleManage.CreateAsync(new IdentityRole(roleName: "User"));
+                var user = new IdentityUser
+                {
+                    Email = registerData.Email,
+                    UserName = registerData.Username,
+                    SecurityStamp = "dummyStamp",
+                };
+                var result = await _userManager.CreateAsync(user, registerData.Password);
+                if (result.Succeeded)
+                {
+                    _userManager.AddToRoleAsync(user, "User").Wait();
+                    return Redirect("Login");
+                }
+                else
+                {
+                    return BadRequest("Could not create user.");
+                }
+            }
 
-        //}
+        }
 
         [AllowAnonymous]
         [AcceptVerbs("Get", "Post")]

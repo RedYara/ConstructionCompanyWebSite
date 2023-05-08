@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Diploma.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Diploma.Persistence.Migrations
 {
     [DbContext(typeof(DiplomaDbContext))]
-    partial class DiplomaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230508105650_IdentityUpdate")]
+    partial class IdentityUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,17 +106,17 @@ namespace Diploma.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("BuildingId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Phone")
+                    b.Property<DateTime?>("EditDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 

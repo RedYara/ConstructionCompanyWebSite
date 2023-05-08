@@ -1,6 +1,10 @@
-﻿@*@model WebApplication3.Models.RegisterRequest
+﻿@model Diploma.WebApi.Models.Account.RegisterRequest
 @{
     ViewData["Title"] = "Регистрация";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
@@ -36,8 +40,4 @@
     </div>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}*@
+

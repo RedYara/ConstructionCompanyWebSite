@@ -9,6 +9,7 @@
       "Diploma.WebApi/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "CoreAdmin": "2.7.0",
           "Diploma.Application": "1.0.0",
           "Diploma.Persistence": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.16",
@@ -39,6 +40,18 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.1.0"
+          }
+        }
+      },
+      "CoreAdmin/2.7.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.16",
+          "NonFactors.Grid.Core.Mvc6": "7.1.0"
+        },
+        "runtime": {
+          "lib/net6.0/DotNetEd.CoreAdmin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -386,6 +399,14 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+      "NonFactors.Grid.Core.Mvc6/7.1.0": {
+        "runtime": {
+          "lib/net6.0/Mvc.Grid.Core.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
       "Npgsql/6.0.9": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -522,6 +543,13 @@
       "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
+    },
+    "CoreAdmin/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qwa33DYykMuQ6JCeDoIPI3NMU91MEWI35ukK/FcMCeWtNjDxuwaWoTRS8P6+vA3cF81AkuIsxCU7CH7yzK0ofw==",
+      "path": "coreadmin/2.7.0",
+      "hashPath": "coreadmin.2.7.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
@@ -844,6 +872,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "NonFactors.Grid.Core.Mvc6/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rvPZICY/Gyca1vEuQmxRXR1PHxlxYmw7JzBjAF6wdQy+bXyikT5aq2kWO+4V0wl62uV6u0fFtL6nVnl9IKniXg==",
+      "path": "nonfactors.grid.core.mvc6/7.1.0",
+      "hashPath": "nonfactors.grid.core.mvc6.7.1.0.nupkg.sha512"
     },
     "Npgsql/6.0.9": {
       "type": "package",

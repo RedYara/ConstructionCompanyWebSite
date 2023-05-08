@@ -17,8 +17,24 @@
       "PackagePath": "staticwebassets\\images\\background.jpg"
     },
     {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\badge.png",
+      "PackagePath": "staticwebassets\\images\\badge.png"
+    },
+    {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\like.png",
+      "PackagePath": "staticwebassets\\images\\like.png"
+    },
+    {
       "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\shield.png",
+      "PackagePath": "staticwebassets\\images\\shield.png"
+    },
+    {
+      "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\images\\video-camera.png",
+      "PackagePath": "staticwebassets\\images\\video-camera.png"
     },
     {
       "Id": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\js\\accessdenied.js",

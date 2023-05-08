@@ -34,9 +34,12 @@ namespace Diploma.WebApi.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(Guid id)
         {
-            var query = new GetHouseDetailsQuery();
+            var query = new GetHouseDetailsQuery()
+            {
+                Id = id
+            };
             var vm = await Mediator.Send(query); 
             return View(vm);
         }

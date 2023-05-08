@@ -36,6 +36,7 @@ namespace Diploma.WebApi
                 options.AccessDeniedPath = $"/Account/AccessDenied";
             });
 
+            services.AddCoreAdmin("User");
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
@@ -59,7 +60,7 @@ namespace Diploma.WebApi
             app.UseCors("AllowAll");
 
             app.UseStaticFiles();
-
+            app.UseCoreAdminCustomTitle("Групп проект 116 панель администратора");
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -80,7 +81,7 @@ namespace Diploma.WebApi
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=House}/{action=Index}/{id?}");
+                    pattern: "/{controller=House}/{action=Index}");
 
             });
         }

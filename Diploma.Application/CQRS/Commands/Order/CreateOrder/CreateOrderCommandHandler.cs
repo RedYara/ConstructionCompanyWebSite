@@ -13,11 +13,12 @@ namespace Diploma.Application.CQRS.Commands.Order.CreateOrder
             var order = new Domain.Order
             {
                 CreationDate = DateTime.Now,
-                Description = request.Description,
-                EditDate = DateTime.Now,
-                Title = request.Title,
+                BuildingId = request.BuildingId,
+                Name = request.Name,
+                Phone = request.Phone
             };
             await _dbContext.Orders.AddAsync(order, cancellationToken);
+            await _dbContext.SaveChangesAsync(cancellationToken);
 
             return Guid.NewGuid();
 

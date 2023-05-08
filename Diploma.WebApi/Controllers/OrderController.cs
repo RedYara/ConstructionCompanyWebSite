@@ -1,4 +1,5 @@
 using AutoMapper;
+using Diploma.Application.CQRS.Commands.Order.CreateOrder;
 using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +30,22 @@ namespace Diploma.WebApi.Controllers
         public async Task<IActionResult> Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateOrder(Guid BuildingId, string name, string phone)
+        {
+            var query = new CreateOrderCommand()
+            {
+                BuildingId = BuildingId,
+                Name = name,
+                Phone = phone
+            };
+            await Mediator.Send(query); 
+            string domainName = Request.Scheme + "://" + Request.Host;
+
+            return Redirect($"{domainName}/house/index");
+
         }
     }
 }
