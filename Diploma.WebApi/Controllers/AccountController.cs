@@ -29,7 +29,7 @@ namespace WebApplication3.Controllers
             _signInManager.SignOutAsync();
             if (User.Identity.IsAuthenticated)
             {
-                return Redirect("/apps/index");
+                return Redirect("/house/index");
             }
             return View();
         }
@@ -48,7 +48,7 @@ namespace WebApplication3.Controllers
                         await _signInManager.SignOutAsync();
                         if ((await _signInManager.PasswordSignInAsync(user, loginData.Password, false, false)).Succeeded)
                         {
-                            return Redirect("/Apps");
+                            return Redirect("/House/Index");
                         }
                     }
                 }
@@ -68,7 +68,7 @@ namespace WebApplication3.Controllers
         public IActionResult Logout()
         {
             _signInManager.SignOutAsync();
-            return RedirectPermanent("Login");
+            return RedirectPermanent("/house/index");
         }
 
 

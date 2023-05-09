@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Diploma.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Diploma.Persistence.Migrations
 {
     [DbContext(typeof(DiplomaDbContext))]
-    partial class DiplomaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230509164718_AddBuildingTypeOrder")]
+    partial class AddBuildingTypeOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

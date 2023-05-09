@@ -81,6 +81,7 @@
             <form action="@domainName/Order/CreateOrder" method="post">
             <div class="modal-body">
                 <input type="hidden" name="BuildingId" value="@Model.Id" />
+                <input type="hidden" name="buildingType" value="House" />
                 <label class="control-label" for="name">Ваше имя</label>
                 <input class="form-control" type="text" name="name" for="name" id="orderName" />
                 <label class="control-label" for="number">Номер телефона</label>

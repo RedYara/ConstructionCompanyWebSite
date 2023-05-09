@@ -15,7 +15,8 @@ namespace Diploma.Application.CQRS.Commands.Order.CreateOrder
                 CreationDate = DateTime.Now,
                 BuildingId = request.BuildingId,
                 Name = request.Name,
-                Phone = request.Phone
+                Phone = request.Phone,
+                BuildingType = request.BuildingType,
             };
             await _dbContext.Orders.AddAsync(order, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);

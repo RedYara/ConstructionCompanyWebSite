@@ -8,6 +8,7 @@ namespace Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery
     {
         public Guid Id { get; set; }
         public Guid BuildingId { get; set; }
+        public string BuildingType { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime CreationDate { get; set; }
@@ -23,7 +24,9 @@ namespace Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery
                 .ForMember(x => x.Phone,
                 opt => opt.MapFrom(order => order.Phone))
                 .ForMember(x => x.CreationDate,
-                opt => opt.MapFrom(order => order.CreationDate));
+                opt => opt.MapFrom(order => order.CreationDate))
+                .ForMember(x => x.BuildingType,
+                opt => opt.MapFrom(order => order.BuildingType));
         }
     }
 }
