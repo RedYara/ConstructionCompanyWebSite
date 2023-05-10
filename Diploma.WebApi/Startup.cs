@@ -69,7 +69,7 @@ namespace Diploma.WebApi
                 await next();
                 if (context.Response.StatusCode == 404)
                 {
-                    context.Request.Path = "/House/Index";
+                    context.Request.Path = "/Home/Index";
                     await next();
                 }
             });
@@ -81,7 +81,7 @@ namespace Diploma.WebApi
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "/{controller=House}/{action=Index}");
+                    pattern: "/{controller=Home}/{action=Index}");
 
             });
         }

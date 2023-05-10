@@ -1,4 +1,4 @@
-﻿@model Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery.HouseListVm
+﻿@model Diploma.Application.CQRS.Queries.BathsAndHouses.BathsAndHousesVm;
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -64,20 +64,38 @@
         <h1>Наш каталог проектов</h1>
     </div>
     <div class="image-grid">
-        @foreach (var house in Model.Houses)
+        @foreach (var building in Model.BathsAndHouses)
         {
-            <a class="image-container" href="details?id=@house.Id" style="text-decoration:none; color:black;">
-                <img src="data:image/png;base64, @house.Preview" />
+            @if( building.BuildingType == "House" )
+            {
+                <a class="image-container" asp-controller="house" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
+                <img src="data:image/png;base64, @building.Preview" />
                 <div class="info-box-right">
-                    @house.Name
+                    @building.Name
                 </div>
                 <div class="info-box-description">
-                    @house.Desciption
+                    @building.Desciption
                 </div>
                 <div class="info-box-bottom">
-                    <i class="fa-solid fa-arrow-up-right-dots"></i> @house.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @house.Size @house.Square м²
+                    <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
                 </div>
-            </a>
+                </a>
+            }
+            else
+            {
+            <a class="image-container" asp-controller="bath" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
+                <img src="data:image/png;base64, @building.Preview" />
+                <div class="info-box-right">
+                    @building.Name
+                </div>
+                <div class="info-box-description">
+                    @building.Desciption
+                </div>
+                <div class="info-box-bottom">
+                    <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
+                </div>
+                </a>                
+            }
         }
     </div>
 </div>

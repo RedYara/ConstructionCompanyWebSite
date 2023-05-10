@@ -2466,19 +2466,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yarud\\.nuget\\packages\\": {}
+    "C:\\Users\\LattePanda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
       "projectName": "Diploma.WebApi",
-      "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\Diploma.WebApi.csproj",
-      "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\obj\\",
+      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2492,11 +2492,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Application\\Diploma.Application.csproj": {
-              "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Application\\Diploma.Application.csproj"
+            "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
             },
-            "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-              "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Persistence\\Diploma.Persistence.csproj"
+            "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
             }
           }
         }

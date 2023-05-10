@@ -7,7 +7,7 @@
         public List<string> Photos { get; set; }
         public string Preview { get; set; }
         public string Desciption { get; set; }
-        public int Square { get; set; }
+        public string Square { get; set; }
         public string Size { get; set; }
         public int Floors { get; set; }
     }

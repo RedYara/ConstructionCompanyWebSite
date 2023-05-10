@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Diploma.Domain\Diploma.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CQRS\Commands\Bath\CreateBath\" />
+  </ItemGroup>
+
 </Project>

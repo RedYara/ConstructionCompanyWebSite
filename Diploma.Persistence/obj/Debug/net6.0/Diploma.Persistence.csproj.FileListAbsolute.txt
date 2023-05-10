@@ -17,3 +17,22 @@ C:\Users\yarud\source\repos\Diploma\Diploma.Persistence\obj\Debug\net6.0\Diploma
 C:\Users\yarud\source\repos\Diploma\Diploma.Persistence\obj\Debug\net6.0\ref\Diploma.Persistence.dll
 C:\Users\yarud\source\repos\Diploma\Diploma.Persistence\bin\Debug\net6.0\Diploma.Persistence.runtimeconfig.json
 C:\Users\yarud\source\repos\Diploma\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.genruntimeconfig.cache
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Persistence.deps.json
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Persistence.runtimeconfig.json
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Persistence.dll
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Persistence.pdb
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Application.dll
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Domain.dll
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Application.pdb
+D:\C# projects\DiplomaWork\Diploma.Persistence\bin\Debug\net6.0\Diploma.Domain.pdb
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.csproj.AssemblyReference.cache
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.AssemblyInfoInputs.cache
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.AssemblyInfo.cs
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.csproj.CoreCompileInputs.cache
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.csproj.CopyComplete
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.dll
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\refint\Diploma.Persistence.dll
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.pdb
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\Diploma.Persistence.genruntimeconfig.cache
+D:\C# projects\DiplomaWork\Diploma.Persistence\obj\Debug\net6.0\ref\Diploma.Persistence.dll

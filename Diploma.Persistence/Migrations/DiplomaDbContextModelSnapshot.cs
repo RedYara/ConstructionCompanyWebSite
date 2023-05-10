@@ -52,8 +52,9 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Square")
-                        .HasColumnType("integer");
+                    b.Property<string>("Square")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

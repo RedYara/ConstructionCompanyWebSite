@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.House.CreateHouse;
+using Diploma.Application.CQRS.Queries.BathsAndHouses;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery;
 using Diploma.Persistence;
@@ -22,15 +23,15 @@ namespace Diploma.WebApi.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public async Task<IActionResult> Index()
-        {
-            var query = new GetHouseListQuery();
-            var vm = await Mediator.Send(query);
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Index()
+        //{
+        //    var query = new GetBathsAndHousesQuery();
+        //    var vm = await Mediator.Send(query);
 
-            return View(vm);
-        }
+        //    return View(vm);
+        //}
 
         [HttpGet]
         [AllowAnonymous]

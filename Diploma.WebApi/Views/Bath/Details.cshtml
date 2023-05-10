@@ -1,0 +1,123 @@
+﻿@model Diploma.Application.CQRS.Queries.Baths.GetBathDetailsQuery.BathDetailsVm;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<style>
+    .swiper .swiper-slide > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+</style>
+<div class="container" style="margin-top:5%">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="swiper mySwiper" style="--swiper-navigation-color: #fff;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
+                    @foreach (var item in Model.Photos)
+                    {
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" /></div>
+                    }
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
+                    @foreach (var item in Model.Photos)
+                    {
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" /></div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>@Model.Name</h1>
+            <table class="table">
+                <tr>
+                    <td>
+                        Площадь:
+                    </td>
+                    <td>
+                        @Model.Square  м²
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Количество этажей:
+                    </td>
+                    <td>
+                        @Model.Floors
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Размерность:
+                    </td>
+                    <td>
+                        @Model.Size
+                    </td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#makeOrder">Оставить заявку на баню</button>
+        </div>
+    </div>
+</div>
+
+@{
+    string domainName = Context.Request.Scheme + "://" + Context.Request.Host;
+}
+<div class="modal fade" id="makeOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="@domainName/Order/CreateOrder" method="post">
+            <div class="modal-body">
+                <input type="hidden" name="BuildingId" value="@Model.Id" />
+                <input type="hidden" name="buildingType" value="Bath" />
+                <label class="control-label" for="name">Ваше имя</label>
+                <input class="form-control" type="text" name="name" for="name" id="orderName" />
+                <label class="control-label" for="number">Номер телефона</label>
+                    <input class="form-control" type="text" name="phone" for="amount" id="orderNumber" />
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Оставить заявку на звонок</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper2,
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        spaceBetween: 10,
+    });
+</script>
