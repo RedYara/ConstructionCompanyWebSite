@@ -58,7 +58,43 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Baths");
+                    b.ToTable("Baths", (string)null);
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("BathId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BuildingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid?>("HouseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BathId");
+
+                    b.HasIndex("HouseId");
+
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Diploma.Domain.House", b =>
@@ -96,7 +132,7 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Houses");
+                    b.ToTable("Houses", (string)null);
                 });
 
             modelBuilder.Entity("Diploma.Domain.Order", b =>
@@ -127,7 +163,7 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasIndex("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -339,6 +375,17 @@ namespace Diploma.Persistence.Migrations
                     b.HasDiscriminator().HasValue("User");
                 });
 
+            modelBuilder.Entity("Diploma.Domain.Comment", b =>
+                {
+                    b.HasOne("Diploma.Domain.Bath", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("BathId");
+
+                    b.HasOne("Diploma.Domain.House", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("HouseId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -388,6 +435,16 @@ namespace Diploma.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Bath", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("Diploma.Domain.House", b =>
+                {
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

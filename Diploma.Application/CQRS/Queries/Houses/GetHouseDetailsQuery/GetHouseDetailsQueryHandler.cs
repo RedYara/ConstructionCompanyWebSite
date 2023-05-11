@@ -18,7 +18,8 @@ namespace Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery
 
         public async Task<HouseDetailsVm> Handle (GetHouseDetailsQuery request, CancellationToken cancellationToken)
         {
-            var house = await _dbContext.Houses.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var house = await _dbContext.Houses.Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == request.Id);
+            
 
             return _mapper.Map<HouseDetailsVm>(house);
         }

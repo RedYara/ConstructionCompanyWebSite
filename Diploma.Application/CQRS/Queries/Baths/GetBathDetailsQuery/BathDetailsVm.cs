@@ -14,6 +14,7 @@ namespace Diploma.Application.CQRS.Queries.Baths.GetBathDetailsQuery
         public string Square { get; set; }
         public string Size { get; set; }
         public int Floors { get; set; }
+        public List<Comment> Comments { get; set; }
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Bath, BathDetailsVm>()
@@ -32,7 +33,9 @@ namespace Diploma.Application.CQRS.Queries.Baths.GetBathDetailsQuery
                 .ForMember(x => x.Size,
                 opt => opt.MapFrom(order => order.Size))
                 .ForMember(x => x.Floors,
-                opt => opt.MapFrom(order => order.Floors));
+                opt => opt.MapFrom(order => order.Floors))
+                .ForMember(x => x.Comments,
+                opt => opt.MapFrom(order => order.Comments));
         }
     }
 }

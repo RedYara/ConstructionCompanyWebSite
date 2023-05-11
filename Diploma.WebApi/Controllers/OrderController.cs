@@ -50,7 +50,7 @@ namespace Diploma.WebApi.Controllers
             await Mediator.Send(query); 
             string domainName = Request.Scheme + "://" + Request.Host;
 
-            return Redirect($"{domainName}/house/index");
+            return Redirect($"{domainName}/home/index");
 
         }
 

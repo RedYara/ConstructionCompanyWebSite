@@ -19,9 +19,9 @@ namespace Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery
 
         public async Task<BathDetailsVm> Handle (GetBathDetailsQuery request, CancellationToken cancellationToken)
         {
-            var house = await _dbContext.Baths.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var bath = await _dbContext.Baths.FirstOrDefaultAsync(x => x.Id == request.Id);
 
-            return _mapper.Map<BathDetailsVm>(house);
+            return _mapper.Map<BathDetailsVm>(bath);
         }
     }
 }

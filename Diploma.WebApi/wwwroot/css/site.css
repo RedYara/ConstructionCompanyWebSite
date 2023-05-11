@@ -12,6 +12,10 @@ body {
     font-family: Bradley Hand, cursive;
 }
 
+.app-container {
+    max-width: 80%;
+}
+
 .nav-bg {
     content: '';
     position: absolute;
@@ -38,7 +42,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 25vw;
     background: rgb(50, 50, 50);
     background: url(../images/background.jpg);
     background-repeat: no-repeat;
@@ -102,11 +106,11 @@ h1 {
 .info-box-right {
     position: absolute;
     opacity: 0;
-    font-size:2vw;
     top: 5%;
     right: 0;
     width: 40%;
     height: 100%;
+    font-size: 150%;
     transform: translateX(0%);
     transition: all 0.5s ease-in-out;
     z-index: 0;
@@ -118,7 +122,6 @@ h1 {
     top: 90%;
     right: 0;
     width: 70%;
-    font-size: 1.31vw;
     height: 10%;
     transition: all 0.5s ease-in-out;
     z-index: 0;
@@ -131,7 +134,7 @@ h1 {
     right: -2%;
     width: 90%;
     height: 10%;
-    transform: translateX(50%);
+    transform: translateX(0 %);
     transition: all 0.5s ease-in-out;
     z-index: 1;
 }
@@ -164,4 +167,11 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
+}
+
+.btn-delete {
+    border-radius: 20%;
+    background-color: #dc3545;
+    color: #fff;
+    margin: 1px;
 }

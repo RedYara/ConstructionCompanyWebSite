@@ -14,10 +14,11 @@
         object-position: center;
     }
 </style>
-<div class="container" style="margin-top:5%">
+<input type="hidden" id="buildingId" value="@Model.Id" />
+<div class="app-container container-fluid" style="margin-top:5%">
     <div class="row">
         <div class="col-md-6">
-            <div class="swiper mySwiper" style="--swiper-navigation-color: #fff;">
+            <div class="swiper mySwiper" style="--swiper-navigation-color: green;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
                     @foreach (var item in Model.Photos)
@@ -70,6 +71,62 @@
             <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#makeOrder">Оставить заявку на дом</button>
         </div>
     </div>
+    <hr />
+    <section>
+        <div class="text-center mt-4"><h1>Комментарии</h1></div>
+    <div class="d-flex justify-content-center row mt-4">
+            <div class="col-md-6 d-flex flex-column comment-section">
+                @foreach (var item in Model.Comments){
+                    <div class="card mt-2" style="background: inherit;">
+                        <div class="card-header d-flex flex-column justify-content-start ml-2">
+                            <span class="d-block font-weight-bold name">@item.Name                            
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <form asp-controller="Comment" asp-action="DeleteComment">
+                                    <div class="text-end">                                    
+                                        <input type="hidden" name="Id" value="@item.Id" />
+                                        <button type="submit" class="btn btn-delete" title="Удалить комментарий"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </form>
+                            }
+                            </span> 
+                        </div>
+                        <div class="mt-2 card-body">
+                            <p class="comment-text">@item.Content</p>
+                        </div>
+                    </div>
+                }
+                @if(Model.Comments.Count < 1)
+                {
+                    <h4>Будьте первым, кто оставит комментарий!</h4>
+                }
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12">
+                <form asp-controller="Comment" asp-action="CreateComment">
+                    <input type="hidden" name="buildingId" value="@Model.Id" />
+                <input type="hidden" name="buildingType" id="buildingType" value="House" />
+                    <div class="form-group">
+                        <h4>Оставьте комментарий</h4>
+                        <label for="message">Текст</label>
+                        <textarea name="content" msg cols="30" rows="5" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" name="name" id="fullname" class="form-control" maxlength="15" data-val="true" data-val-required="Не указано имя" data-val-regex="Можно использовать только русскую латиницу" data-val-regex-pattern="^[а-яА-ЯЁё]*" autocomplete="off">
+                        <span class="text-danger" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Почта</label>
+                        <input type="text" name="email" id="email" class="form-control" data-val="true" required data-val-regex="Электронная почта введена не верно" data-val-regex-pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$" data-val-required="Не указана почта" autocomplete="off">
+                        <span class="text-danger" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group text-end">
+                        <button type="submit" class="btn btn-success mt-2">Оставить комментарий</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</section>
 </div>
 
 @{
@@ -81,11 +138,11 @@
             <form action="@domainName/Order/CreateOrder" method="post">
             <div class="modal-body">
                 <input type="hidden" name="BuildingId" value="@Model.Id" />
-                <input type="hidden" name="buildingType" value="House" />
+                <input type="hidden" name="buildingType" id="buildingType" value="House" />
                 <label class="control-label" for="name">Ваше имя</label>
                 <input class="form-control" type="text" name="name" for="name" id="orderName" />
                 <label class="control-label" for="number">Номер телефона</label>
-                    <input class="form-control" type="text" name="phone" for="amount" id="orderNumber" />
+                <input class="form-control" type="text" name="phone" for="amount" id="orderNumber" />
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Оставить заявку на звонок</button>
@@ -121,3 +178,6 @@
         spaceBetween: 10,
     });
 </script>
+<script>
+   
+  </script>
