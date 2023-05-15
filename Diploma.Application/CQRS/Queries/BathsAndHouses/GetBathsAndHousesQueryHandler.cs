@@ -47,10 +47,12 @@ namespace Diploma.Application.CQRS.Queries.BathsAndHouses
                     Square = x.Square
                 }).Take(4).ToListAsync(cancellationToken)
             };
+            var reviewsList = await _dbContext.Reviews.Take(6).OrderByDescending(x => x.Date).ToListAsync();
             foreach (var item in bathList.BathsAndHouses)
             {
                 houseList.BathsAndHouses.Add(item);
             }
+            houseList.Reviews = reviewsList;
             return houseList;
         }
     }

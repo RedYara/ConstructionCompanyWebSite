@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Diploma.WebApi
 build_property.RootNamespace = Diploma.WebApi
-build_property.ProjectDir = D:\C# projects\DiplomaWork\Diploma.WebApi\
+build_property.ProjectDir = C:\Users\yarud\source\repos\Diploma\Diploma.WebApi\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\C# projects\DiplomaWork\Diploma.WebApi
+build_property.MSBuildProjectDirectory = C:\Users\yarud\source\repos\Diploma\Diploma.WebApi
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Account/AccessDenied.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Account/Login.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Account/Logout.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Account/Register.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Bath/Create.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Bath/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0aFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Bath/Details.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Bath/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0aFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Home/Index.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/House/Create.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/House/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/House/Details.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/House/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG91c2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Order/Create.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Order/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Order/Manage.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Order/Manage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTWFuYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Shared/_Layout.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Shared/_ViewImports.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Shared/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Shared/_ViewStart.cshtml]
+[C:/Users/yarud/source/repos/Diploma/Diploma.WebApi/Views/Shared/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

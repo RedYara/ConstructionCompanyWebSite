@@ -12,6 +12,7 @@
           "CoreAdmin": "2.7.0",
           "Diploma.Application": "1.0.0",
           "Diploma.Persistence": "1.0.0",
+          "FluentEmail.Core": "3.0.2",
           "Microsoft.EntityFrameworkCore": "6.0.16",
           "Microsoft.EntityFrameworkCore.Design": "6.0.16",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.16"
@@ -52,6 +53,17 @@
           "lib/net6.0/DotNetEd.CoreAdmin.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FluentEmail.Core/3.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Core.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
           }
         }
       },
@@ -550,6 +562,13 @@
       "sha512": "sha512-qwa33DYykMuQ6JCeDoIPI3NMU91MEWI35ukK/FcMCeWtNjDxuwaWoTRS8P6+vA3cF81AkuIsxCU7CH7yzK0ofw==",
       "path": "coreadmin/2.7.0",
       "hashPath": "coreadmin.2.7.0.nupkg.sha512"
+    },
+    "FluentEmail.Core/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uQFFbJgMhhCFUti7pfMi429fMNi7fLGMj+7uDtD7POlQzLxlhXJ6tmt4Y1SI51sZsA36GO5b7+o29eY/dKiICQ==",
+      "path": "fluentemail.core/3.0.2",
+      "hashPath": "fluentemail.core.3.0.2.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

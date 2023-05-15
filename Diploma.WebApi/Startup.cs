@@ -36,6 +36,8 @@ namespace Diploma.WebApi
                 options.AccessDeniedPath = $"/Account/AccessDenied";
             });
 
+            services.AddFluentEmail("fromemail@test.test");
+
             services.AddCoreAdmin("User");
             services.AddMvc();
             services.AddMemoryCache();

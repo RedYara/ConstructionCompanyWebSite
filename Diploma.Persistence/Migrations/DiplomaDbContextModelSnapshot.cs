@@ -58,7 +58,7 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Baths", (string)null);
+                    b.ToTable("Baths");
                 });
 
             modelBuilder.Entity("Diploma.Domain.Comment", b =>
@@ -94,7 +94,7 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasIndex("HouseId");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Diploma.Domain.House", b =>
@@ -132,7 +132,7 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Houses", (string)null);
+                    b.ToTable("Houses");
                 });
 
             modelBuilder.Entity("Diploma.Domain.Order", b =>
@@ -163,7 +163,28 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasIndex("Id");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Review", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

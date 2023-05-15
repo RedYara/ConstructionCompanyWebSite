@@ -53,6 +53,18 @@
           "buildMultiTargeting/CoreAdmin.props": {}
         }
       },
+      "FluentEmail.Core/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentEmail.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Core.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1196,6 +1208,19 @@
         "staticwebassets/js/jquery.validate.unobtrusive.min.js",
         "staticwebassets/js/mvc-grid/mvc-grid.js",
         "staticwebassets/js/site.js"
+      ]
+    },
+    "FluentEmail.Core/3.0.2": {
+      "sha512": "uQFFbJgMhhCFUti7pfMi429fMNi7fLGMj+7uDtD7POlQzLxlhXJ6tmt4Y1SI51sZsA36GO5b7+o29eY/dKiICQ==",
+      "type": "package",
+      "path": "fluentemail.core/3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentemail.core.3.0.2.nupkg.sha512",
+        "fluentemail.core.nuspec",
+        "fluentemail_logo_64x64.png",
+        "lib/netstandard2.0/FluentEmail.Core.dll"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -2460,25 +2485,26 @@
       "CoreAdmin >= 2.7.0",
       "Diploma.Application >= 1.0.0",
       "Diploma.Persistence >= 1.0.0",
+      "FluentEmail.Core >= 3.0.2",
       "Microsoft.EntityFrameworkCore >= 6.0.16",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.16",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.16"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LattePanda\\.nuget\\packages\\": {}
+    "C:\\Users\\yarud\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\Diploma.WebApi.csproj",
       "projectName": "Diploma.WebApi",
-      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
-      "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\obj\\",
+      "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2492,11 +2518,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+            "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Application\\Diploma.Application.csproj": {
+              "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Application\\Diploma.Application.csproj"
             },
-            "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
+            "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+              "projectPath": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.Persistence\\Diploma.Persistence.csproj"
             }
           }
         }
@@ -2518,6 +2544,10 @@
           "CoreAdmin": {
             "target": "Package",
             "version": "[2.7.0, )"
+          },
+          "FluentEmail.Core": {
+            "target": "Package",
+            "version": "[3.0.2, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

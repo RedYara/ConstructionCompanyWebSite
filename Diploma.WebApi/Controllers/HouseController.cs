@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.House.CreateHouse;
+using Diploma.Application.CQRS.Commands.Review.CreateReview;
 using Diploma.Application.CQRS.Queries.BathsAndHouses;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery;

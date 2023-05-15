@@ -118,3 +118,4 @@ D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\refint\Diploma.WebApi
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\Diploma.WebApi.pdb
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\Diploma.WebApi.genruntimeconfig.cache
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\ref\Diploma.WebApi.dll
+C:\Users\yarud\source\repos\Diploma\Diploma.WebApi\bin\Debug\net6.0\FluentEmail.Core.dll
