@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using Diploma.Application.CQRS.Commands.Bath.CreateBath;
 using Diploma.Application.CQRS.Commands.House.CreateHouse;
 using Diploma.Application.CQRS.Queries.Baths.GetBathList;
 using Diploma.Application.CQRS.Queries.BathsAndHouses;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery;
 using Diploma.Persistence;
+using Diploma.WebApi.Models.Bath;
 using Diploma.WebApi.Models.House;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -49,9 +51,9 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpPost, DisableRequestSizeLimit]
-        public async Task<IActionResult> CreateBath(CreateHouseDto request)
+        public async Task<IActionResult> CreateBath(CreateBathDto request)
         {
-            var command = _mapper.Map<CreateHouseCommand>(request);
+            var command = _mapper.Map<CreateBathCommand>(request);
             await Mediator.Send(command);
             return RedirectToAction("Create");
         }

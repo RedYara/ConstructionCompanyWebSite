@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.House.CreateHouse;
+using Diploma.Application.CQRS.Commands.House.EditHouse;
 using Diploma.Application.CQRS.Queries.BathsAndHouses;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseDetailsQuery;
 using Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery;
@@ -23,15 +24,26 @@ namespace Diploma.WebApi.Controllers
             _dbContext = dbContext;
         }
 
-        //[HttpGet]
-        //[AllowAnonymous]
-        //public async Task<IActionResult> Index()
-        //{
-        //    var query = new GetBathsAndHousesQuery();
-        //    var vm = await Mediator.Send(query);
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var query = new GetHouseListQuery();
+            var vm = await Mediator.Send(query);
 
-        //    return View(vm);
-        //}
+            return View(vm);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var query = new GetHouseDetailsQuery()
+            {
+                Id = id
+            };
+            var vm = await Mediator.Send(query);
+            var viewmodel = _mapper.Map<EditHouseDto>(vm);
+
+            return View(viewmodel);
+        }
 
         [HttpGet]
         [AllowAnonymous]
@@ -56,6 +68,15 @@ namespace Diploma.WebApi.Controllers
             var command = _mapper.Map<CreateHouseCommand>(request);
             await Mediator.Send(command);
             return RedirectToAction("Create");
+        }
+
+        [HttpPost, DisableRequestSizeLimit]
+        public async Task<IActionResult> EditHouse(EditHouseDto editHouseDto)
+        {
+            var command = _mapper.Map<EditHouseCommand>(editHouseDto);
+            await Mediator.Send(command);
+
+            return RedirectToAction("index");
         }
 
     }

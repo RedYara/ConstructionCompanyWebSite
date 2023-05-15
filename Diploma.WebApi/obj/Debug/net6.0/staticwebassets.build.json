@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tmvJXWis9ZIs80FxaiAhbxY5XJs2pJ3mkhKUJdZpTTk=",
+  "Hash": "Rtt4cGu8rtsbhzJgeo8zjdcwDV6Qp6Wb9cDHQoWLE20=",
   "Source": "Diploma.WebApi",
   "BasePath": "_content/Diploma.WebApi",
   "Mode": "Default",
@@ -814,6 +814,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\accessdenied.js"
+    },
+    {
+      "Identity": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\input-mask.js",
+      "SourceId": "Diploma.WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\",
+      "BasePath": "_content/Diploma.WebApi",
+      "RelativePath": "js/input-mask.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\input-mask.js"
     },
     {
       "Identity": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\site.js",

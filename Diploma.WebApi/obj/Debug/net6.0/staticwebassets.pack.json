@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\js\\accessdenied.js"
     },
     {
+      "Id": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\input-mask.js",
+      "PackagePath": "staticwebassets\\js\\input-mask.js"
+    },
+    {
       "Id": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

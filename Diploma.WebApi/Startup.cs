@@ -39,7 +39,6 @@ namespace Diploma.WebApi
             services.AddScoped<IMailSender, MailSender>();
 
             services.Configure<EmailServiceOptions>(Configuration.GetSection("EmailServiceOptions"));
-            services.AddCoreAdmin("User");
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
