@@ -2121,11 +2121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
+      "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj",
       "projectName": "Diploma.Application",
-      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
+      "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj",
       "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\obj\\",
+      "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2142,8 +2142,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
-              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj"
+            "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj"
             }
           }
         }

@@ -31,6 +31,19 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "BouncyCastle.Cryptography/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CoreAdmin/2.7.0": {
         "type": "package",
         "dependencies": {
@@ -63,6 +76,22 @@
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "MailKit/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
           }
         }
       },
@@ -826,6 +855,25 @@
           }
         }
       },
+      "MimeKit/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.1.1",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Security.Cryptography.Pkcs": "6.0.2",
+          "System.Text.Encoding.CodePages": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
       "NonFactors.Grid.Core.Mvc6/7.1.0": {
         "type": "package",
         "compile": {
@@ -920,6 +968,22 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.Formats.Asn1/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -957,38 +1021,26 @@
           }
         }
       },
-      "System.Security.Cryptography.Cng/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netcoreapp2.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Cryptography.Pkcs/4.5.0": {
+      "System.Security.Cryptography.Pkcs/6.0.2": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.Cng": "4.5.0"
+          "System.Formats.Asn1": "6.0.0"
         },
         "compile": {
-          "ref/netcoreapp2.1/_._": {
+          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {}
+          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {
+          "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1047,6 +1099,31 @@
           }
         }
       },
+      "System.Text.Encoding.CodePages/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Encodings.Web/4.5.0": {
         "type": "package",
         "compile": {
@@ -1090,6 +1167,22 @@
         },
         "runtime": {
           "bin/placeholder/Diploma.Domain.dll": {}
+        }
+      },
+      "Diploma.EmailSender/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Diploma.Persistence": "1.0.0",
+          "MailKit": "4.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "MimeKit": "4.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Diploma.EmailSender.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Diploma.EmailSender.dll": {}
         }
       },
       "Diploma.Persistence/1.0.0": {
@@ -1142,6 +1235,26 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "BouncyCastle.Cryptography/2.1.1": {
+      "sha512": "NNQaa4eyf5YjSdLKUWGPzq5HXZQc3yGybfIOkR6UY1C/rRFWdo0UhSzBqqnxwGnq3ie4vkN0JlzhhANjfTIJIQ==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.1.1.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
       ]
     },
     "CoreAdmin/2.7.0": {
@@ -1212,6 +1325,42 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "MailKit/4.0.0": {
+      "sha512": "vtP6nUU0ByEZTnpbtsfdxyRvcssNSgIml4zi2hpBOV4gYNoaYSt+4VCx28MMnfaO/9J1IzcG+Hc8kXMkWX6iRQ==",
+      "type": "package",
+      "path": "mailkit/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mailkit-50.png",
+        "lib/net462/MailKit.dll",
+        "lib/net462/MailKit.dll.config",
+        "lib/net462/MailKit.pdb",
+        "lib/net462/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.dll.config",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.dll.config",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/net6.0/MailKit.dll",
+        "lib/net6.0/MailKit.dll.config",
+        "lib/net6.0/MailKit.pdb",
+        "lib/net6.0/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.dll.config",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "lib/netstandard2.1/MailKit.dll",
+        "lib/netstandard2.1/MailKit.dll.config",
+        "lib/netstandard2.1/MailKit.pdb",
+        "lib/netstandard2.1/MailKit.xml",
+        "mailkit.4.0.0.nupkg.sha512",
+        "mailkit.nuspec"
       ]
     },
     "MediatR/11.1.0": {
@@ -2044,6 +2193,42 @@
         "version.txt"
       ]
     },
+    "MimeKit/4.0.0": {
+      "sha512": "AIyj//7nDutepZjMlYFbc19PguEl+35lryQJX2YVr486G7ihfB4X4lPXjNUyjCcclr3Wq0P2yiQ6+Sonqc7z5A==",
+      "type": "package",
+      "path": "mimekit/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mimekit-50.png",
+        "lib/net462/MimeKit.dll",
+        "lib/net462/MimeKit.dll.config",
+        "lib/net462/MimeKit.pdb",
+        "lib/net462/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.dll.config",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.dll.config",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/net6.0/MimeKit.dll",
+        "lib/net6.0/MimeKit.dll.config",
+        "lib/net6.0/MimeKit.pdb",
+        "lib/net6.0/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.dll.config",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.dll.config",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.4.0.0.nupkg.sha512",
+        "mimekit.nuspec"
+      ]
+    },
     "NonFactors.Grid.Core.Mvc6/7.1.0": {
       "sha512": "rvPZICY/Gyca1vEuQmxRXR1PHxlxYmw7JzBjAF6wdQy+bXyikT5aq2kWO+4V0wl62uV6u0fFtL6nVnl9IKniXg==",
       "type": "package",
@@ -2171,6 +2356,29 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Formats.Asn1/6.0.0": {
+      "sha512": "T6fD00dQ3NTbPDy31m4eQUwKW84s03z0N2C8HpOklyeaDgaJPa/TexP4/SkORMSOwc7WhKifnA6Ya33AkzmafA==",
+      "type": "package",
+      "path": "system.formats.asn1/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Formats.Asn1.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Formats.Asn1.dll",
+        "lib/net461/System.Formats.Asn1.xml",
+        "lib/net6.0/System.Formats.Asn1.dll",
+        "lib/net6.0/System.Formats.Asn1.xml",
+        "lib/netstandard2.0/System.Formats.Asn1.dll",
+        "lib/netstandard2.0/System.Formats.Asn1.xml",
+        "system.formats.asn1.6.0.0.nupkg.sha512",
+        "system.formats.asn1.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -2238,100 +2446,41 @@
         "version.txt"
       ]
     },
-    "System.Security.Cryptography.Cng/4.5.0": {
-      "sha512": "WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
+    "System.Security.Cryptography.Pkcs/6.0.2": {
+      "sha512": "1YcPZrdfjbHtzA2Y9EeAZ1zt7EWPBs30lgpG9PXgwP7onF91+sX1qijegcnuo4cULCcT8GiaaJFsDcEqdc9PVg==",
       "type": "package",
-      "path": "system.security.cryptography.cng/4.5.0",
+      "path": "system.security.cryptography.pkcs/6.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Cryptography.Cng.dll",
-        "lib/net461/System.Security.Cryptography.Cng.dll",
-        "lib/net462/System.Security.Cryptography.Cng.dll",
-        "lib/net47/System.Security.Cryptography.Cng.dll",
-        "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.dll",
-        "ref/net461/System.Security.Cryptography.Cng.xml",
-        "ref/net462/System.Security.Cryptography.Cng.dll",
-        "ref/net462/System.Security.Cryptography.Cng.xml",
-        "ref/net47/System.Security.Cryptography.Cng.dll",
-        "ref/net47/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.xml",
-        "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.cryptography.cng.4.5.0.nupkg.sha512",
-        "system.security.cryptography.cng.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Security.Cryptography.Pkcs/4.5.0": {
-      "sha512": "TGQX51gxpY3K3I6LJlE2LAftVlIMqJf0cBGhz68Y89jjk3LJCB6SrwiD+YN1fkqemBvWGs+GjyMJukl6d6goyQ==",
-      "type": "package",
-      "path": "system.security.cryptography.pkcs/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.Cryptography.Pkcs.dll",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Security.Cryptography.Pkcs.dll",
-        "lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
-        "lib/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
+        "lib/net461/System.Security.Cryptography.Pkcs.xml",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.xml",
         "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
-        "ref/net46/System.Security.Cryptography.Pkcs.dll",
-        "ref/net461/System.Security.Cryptography.Pkcs.dll",
-        "ref/net461/System.Security.Cryptography.Pkcs.xml",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
-        "ref/netcoreapp2.1/System.Security.Cryptography.Pkcs.xml",
-        "ref/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net46/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
         "runtimes/win/lib/net461/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.xml",
         "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
-        "system.security.cryptography.pkcs.4.5.0.nupkg.sha512",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.6.0.2.nupkg.sha512",
         "system.security.cryptography.pkcs.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Security.Cryptography.Xml/4.5.0": {
@@ -2419,6 +2568,45 @@
         "version.txt"
       ]
     },
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.xml",
+        "lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.6.0.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encodings.Web/4.5.0": {
       "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "type": "package",
@@ -2448,6 +2636,11 @@
       "path": "../Diploma.Domain/Diploma.Domain.csproj",
       "msbuildProject": "../Diploma.Domain/Diploma.Domain.csproj"
     },
+    "Diploma.EmailSender/1.0.0": {
+      "type": "project",
+      "path": "../MailSender/Diploma.EmailSender.csproj",
+      "msbuildProject": "../MailSender/Diploma.EmailSender.csproj"
+    },
     "Diploma.Persistence/1.0.0": {
       "type": "project",
       "path": "../Diploma.Persistence/Diploma.Persistence.csproj",
@@ -2459,6 +2652,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "CoreAdmin >= 2.7.0",
       "Diploma.Application >= 1.0.0",
+      "Diploma.EmailSender >= 1.0.0",
       "Diploma.Persistence >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.16",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.16",
@@ -2471,11 +2665,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj",
       "projectName": "Diploma.WebApi",
-      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj",
       "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\obj\\",
+      "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2492,11 +2686,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+            "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj"
             },
-            "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
+            "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj"
+            },
+            "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj"
             }
           }
         }

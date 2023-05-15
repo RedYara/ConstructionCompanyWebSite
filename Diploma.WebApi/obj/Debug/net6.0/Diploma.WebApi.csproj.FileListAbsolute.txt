@@ -118,3 +118,10 @@ D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\refint\Diploma.WebApi
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\Diploma.WebApi.pdb
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\Diploma.WebApi.genruntimeconfig.cache
 D:\C# projects\DiplomaWork\Diploma.WebApi\obj\Debug\net6.0\ref\Diploma.WebApi.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\MailKit.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\MimeKit.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\Diploma.EmailSender.dll
+D:\C# projects\DiplomaWork\Diploma.WebApi\bin\Debug\net6.0\Diploma.EmailSender.pdb
