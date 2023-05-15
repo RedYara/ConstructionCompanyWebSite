@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj": {}
+    "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
         "projectName": "Diploma.Application",
-        "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
         "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-        "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\obj\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
         "projectName": "Diploma.Domain",
-        "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
         "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-        "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\obj\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,14 +150,14 @@
         }
       }
     },
-    "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj",
-        "projectName": "Diploma.Persistence",
-        "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
+        "projectName": "Diploma.EmailSender",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
         "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-        "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\obj\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,8 +174,84 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+              },
+              "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+        "projectName": "Diploma.Persistence",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
               }
             }
           }
@@ -245,14 +321,14 @@
         }
       }
     },
-    "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
         "projectName": "Diploma.WebApi",
-        "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
         "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-        "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\obj\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -269,14 +345,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
               },
-              "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj"
               },
-              "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
               }
             }
           }
@@ -329,79 +405,6 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj",
-        "projectName": "Diploma.EmailSender",
-        "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\Diploma.EmailSender.csproj",
-        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-        "outputPath": "D:\\C# projects\\DiplomaWork - Copy\\MailSender\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-                "projectPath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

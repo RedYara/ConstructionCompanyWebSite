@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Y87zc6yW6UvA8/h1qr7775a15CBsEMDUAqs/lGo1AM2DFKYNDPjNZuRNAt5yo7QD7Kt+tl5AXE8yD89rGzdaA==",
+  "dgSpecHash": "P2j1LaBubd+7RHLpIY0xnMpXQqPhzKYo7G94P2cilLRARc/oHzKwOPRFzdO96LBqSaQYRWTl6yI8tU4BW7SmTg==",
   "success": true,
-  "projectFilePath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.WebApi\\Diploma.WebApi.csproj",
+  "projectFilePath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LattePanda\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

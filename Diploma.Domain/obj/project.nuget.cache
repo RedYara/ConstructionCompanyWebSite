@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m1u50TsSUnHVkpecO/ACZxe4aujsIae75WMetbyB/CX9f961I5uj+qCr/fg0p2z90iDG0S0h/mfJKqSC3mCulA==",
+  "dgSpecHash": "z7wQd1zl0CzDAAncO3uFSOs/kEEoNWWXI48MT8pmL894SGRKl+CUoK7pp6s9V4riN+nlHysiGYocm1KK8yx0ag==",
   "success": true,
-  "projectFilePath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Domain\\Diploma.Domain.csproj",
+  "projectFilePath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LattePanda\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

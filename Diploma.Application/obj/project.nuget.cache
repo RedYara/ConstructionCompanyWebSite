@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aP8SO7KC/Z9sUNTw9jXrcW+0SqbM6Y+OIaBqR5nmNX6f0fxdy1Zwuw1J4vy5AqNl2vQL7a9yw89U8KwSAo3j6Q==",
+  "dgSpecHash": "6D2ePJPrOLDfAmhO+H8Il7Od+ZRo7oaBFHzFJpGFbUrH0McI3ibnA7g0CPA0C0aH2RV1kItBUMHRrNI55N6GAA==",
   "success": true,
-  "projectFilePath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Application\\Diploma.Application.csproj",
+  "projectFilePath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LattePanda\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",

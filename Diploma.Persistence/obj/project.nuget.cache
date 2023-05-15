@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6KwQY76SPgRzdbfdK8phhWVZfU2yJQO7GXKjPKAFkX0FCpc+oTT8kAGJzzEww/HDTOM9Esk3QQewSqd2E6U74Q==",
+  "dgSpecHash": "fzEfVLUJevbWsq9bL8lmSNl+BmikzDF3I5jLlLjE/BBYwCwpPwb4XwTE582of/MNLV19EecD5GPwZSDnx+tzRg==",
   "success": true,
-  "projectFilePath": "D:\\C# projects\\DiplomaWork - Copy\\Diploma.Persistence\\Diploma.Persistence.csproj",
+  "projectFilePath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LattePanda\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

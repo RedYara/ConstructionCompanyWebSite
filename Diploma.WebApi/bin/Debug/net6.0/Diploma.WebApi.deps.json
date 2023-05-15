@@ -562,6 +562,7 @@
       },
       "Diploma.EmailSender/1.0.0": {
         "dependencies": {
+          "Diploma.Application": "1.0.0",
           "Diploma.Persistence": "1.0.0",
           "MailKit": "4.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
