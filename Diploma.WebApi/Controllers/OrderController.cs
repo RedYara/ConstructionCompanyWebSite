@@ -1,7 +1,8 @@
-using AutoMapper;
+﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.Order.CreateOrder;
 using Diploma.Application.CQRS.Commands.Order.DeleteOrder;
 using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
+using Diploma.Application.Interfaces;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +15,13 @@ namespace Diploma.WebApi.Controllers
     {
         private readonly IMapper _mapper;
         private readonly DiplomaDbContext _dbContext;
+        private readonly IMailSender _mailSender;
 
-        public OrderController(IMapper mapper, DiplomaDbContext dbContext)
+        public OrderController(IMapper mapper, DiplomaDbContext dbContext, IMailSender mailSender)
         {
             _mapper = mapper;
             _dbContext = dbContext;
+            _mailSender = mailSender;
         }
 
         [HttpGet]
@@ -49,6 +52,7 @@ namespace Diploma.WebApi.Controllers
             };
             await Mediator.Send(query); 
             string domainName = Request.Scheme + "://" + Request.Host;
+            await _mailSender.SendEmailAsync("yarudkorolev@gmail.com", "Создан заказ", $"Создан заказ, номер телефона: {phone}, имя заказчика: {name} ");
 
             return Redirect($"{domainName}/home/index");
 

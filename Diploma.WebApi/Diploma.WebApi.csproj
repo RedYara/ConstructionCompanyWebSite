@@ -21,7 +21,9 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Diploma.Application\Diploma.Application.csproj" />
+		<ProjectReference Include="..\Diploma.EmailSender\Diploma.EmailSender.csproj" />
 		<ProjectReference Include="..\Diploma.Persistence\Diploma.Persistence.csproj" />
+		<ProjectReference Include="..\Diploma.EmailSender\Diploma.EmailSender.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

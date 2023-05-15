@@ -6,6 +6,8 @@
 
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="~/js/input-mask.js"></script>
+
 <style>
     .swiper .swiper-slide > img {
         width: 100%;
@@ -23,7 +25,7 @@
                     <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
                     @foreach (var item in Model.Photos)
                     {
-                        <div class="swiper-slide"><img src="data:image/png;base64, @item" /></div>
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" loading="lazy"/></div>
                     }
                 </div>
 
@@ -32,10 +34,10 @@
             </div>
             <div thumbsSlider="" class="swiper mySwiper2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
+                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" loading="lazy" /></div>
                     @foreach (var item in Model.Photos)
                     {
-                        <div class="swiper-slide"><img src="data:image/png;base64, @item" /></div>
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" loading="lazy"/></div>
                     }
                 </div>
             </div>
@@ -137,12 +139,18 @@
         <div class="modal-content">
             <form action="@domainName/Order/CreateOrder" method="post">
             <div class="modal-body">
-                <input type="hidden" name="BuildingId" value="@Model.Id" />
-                <input type="hidden" name="buildingType" id="buildingType" value="House" />
-                <label class="control-label" for="name">Ваше имя</label>
-                <input class="form-control" type="text" name="name" for="name" id="orderName" />
-                <label class="control-label" for="number">Номер телефона</label>
-                <input class="form-control" type="text" name="phone" for="amount" id="orderNumber" />
+                <div class="form-group">
+                    <input type="hidden" name="BuildingId" value="@Model.Id" />
+                    <input type="hidden" name="buildingType" id="buildingType" value="House" />
+                    <label class="control-label" for="name">Ваше имя</label>
+                    <input class="form-control" type="text" name="name" for="name" id="orderName" maxlength="15" data-val="true" data-val-required="Не указано имя" data-val-regex="Можно использовать только русскую латиницу" data-val-regex-pattern="^[а-яА-ЯЁё]*" autocomplete="off"/>
+                    <span class="text-danger" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                </div>                
+                <div class="form-group">
+                    <label class="control-label" for="number">Номер телефона</label>
+                    <input class="form-control" type="text" name="phone" for="amount" id="orderNumber" data-val="true" data-val-required="Не указан номер телефона" />
+                    <span class="text-danger" data-valmsg-for="phone" data-valmsg-replace="true"></span>
+                </div>    
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Оставить заявку на звонок</button>
@@ -177,7 +185,5 @@
         loop: true,
         spaceBetween: 10,
     });
+    $("#orderNumber").mask("+7 (999) 999-99-99", {placeholder: "+7 (123) 456-78-90"})
 </script>
-<script>
-   
-  </script>

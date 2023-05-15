@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "mKPU67IccOQ2zBzIdFB8pE1GQFBULroR0NCyV2a0C24=",
+=======
+  "Hash": "Rtt4cGu8rtsbhzJgeo8zjdcwDV6Qp6Wb9cDHQoWLE20=",
+>>>>>>> 7080e30e58ac0d0818f206063d4b5faf2c7cb3b1
   "Source": "Diploma.WebApi",
   "BasePath": "_content/Diploma.WebApi",
   "Mode": "Default",
@@ -816,7 +820,28 @@
       "OriginalItemSpec": "wwwroot\\js\\accessdenied.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\js\\site.js",
+=======
+      "Identity": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\input-mask.js",
+      "SourceId": "Diploma.WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\",
+      "BasePath": "_content/Diploma.WebApi",
+      "RelativePath": "js/input-mask.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\input-mask.js"
+    },
+    {
+      "Identity": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\wwwroot\\js\\site.js",
+>>>>>>> 7080e30e58ac0d0818f206063d4b5faf2c7cb3b1
       "SourceId": "Diploma.WebApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yarud\\source\\repos\\Diploma\\Diploma.WebApi\\wwwroot\\",

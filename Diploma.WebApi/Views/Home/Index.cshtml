@@ -69,16 +69,16 @@
             @if (building.BuildingType == "House")
             {
                 <a class="image-container" asp-controller="house" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
-                    <img src="data:image/png;base64, @building.Preview" />
-                    <div class="info-box-right">
-                        @building.Name
-                    </div>
-                    <div class="info-box-description">
-                        @building.Desciption...
-                    </div>
-                    <div class="info-box-bottom">
-                        <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
-                    </div>
+                <img src="data:image/png;base64, @building.Preview" />
+                <div class="info-box-right">
+                    @building.Name
+                </div>
+                <div class="info-box-description">
+                    @building.Desciption...
+                </div>
+                <div class="info-box-bottom">
+                    <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
+                </div>
                 </a>
             }
             else

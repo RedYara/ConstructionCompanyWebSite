@@ -1,9 +1,9 @@
 ﻿using Diploma.Application;
 using Diploma.Application.Common.Mappings;
-using Diploma.Domain;
 using Diploma.Persistence;
-using Microsoft.AspNetCore.Identity;
 using System.Reflection;
+using Diploma.EmailSender;
+using Diploma.Application.Interfaces;
 
 namespace Diploma.WebApi
 {
@@ -36,9 +36,9 @@ namespace Diploma.WebApi
                 options.AccessDeniedPath = $"/Account/AccessDenied";
             });
 
-            services.AddFluentEmail("fromemail@test.test");
+            services.AddScoped<IMailSender, MailSender>();
 
-            services.AddCoreAdmin("User");
+            services.Configure<EmailServiceOptions>(Configuration.GetSection("EmailServiceOptions"));
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();

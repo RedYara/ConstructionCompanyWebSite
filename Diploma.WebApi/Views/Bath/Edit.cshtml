@@ -1,13 +1,14 @@
-﻿@model Diploma.WebApi.Models.Bath.CreateBathDto
+﻿@model Diploma.WebApi.Models.House.EditHouseDto
+
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="app-container container-fluid" style="margin-top:4%">
-    <h3 class="text-center">Добавление бани</h3>
-
-    <form asp-action="CreateBath" enctype="multipart/form-data" method="post">
+<div class="app-container container-fluid" style="margin-top:3%">
+    <h3 class="text-center">Редактирование дома</h3>
+    
+    <form asp-action="EditHouse" enctype="multipart/form-data" method="post">
         <div class="row">
             <div class="col-md-6">
                 @Html.LabelFor(m => m.Floors, "Количество этажей")
@@ -50,7 +51,7 @@
             </div>
         </div>
         <div class="text-end">
-            <button type="submit" class="btn btn-primary mt-4">Добавить баню</button>
+            <button type="submit" class="btn btn-primary mt-4">Добавить дом</button>
         </div>
     
     </form>

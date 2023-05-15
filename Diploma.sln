@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.Persistence", "Dipl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.WebApi", "Diploma.WebApi\Diploma.WebApi.csproj", "{31F08285-9731-442C-A395-B7A05ED33D7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diploma.EmailSender", "Diploma.EmailSender\Diploma.EmailSender.csproj", "{121D8579-49FE-420A-899B-D6BA59CDE7EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{31F08285-9731-442C-A395-B7A05ED33D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31F08285-9731-442C-A395-B7A05ED33D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31F08285-9731-442C-A395-B7A05ED33D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121D8579-49FE-420A-899B-D6BA59CDE7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121D8579-49FE-420A-899B-D6BA59CDE7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121D8579-49FE-420A-899B-D6BA59CDE7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121D8579-49FE-420A-899B-D6BA59CDE7EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{4137111A-E3AC-43E9-8953-1BD61B1F844E} = {054930E4-2345-4F21-90F8-0272F6B76472}
 		{2DFAECE0-CD95-4BB8-AA73-F4676F09F9CF} = {FF0BD16F-B81C-4F4A-A57F-8FFC1A7786EE}
 		{31F08285-9731-442C-A395-B7A05ED33D7A} = {7C525012-EA81-4F54-B344-2DA761B765D0}
+		{121D8579-49FE-420A-899B-D6BA59CDE7EC} = {FF0BD16F-B81C-4F4A-A57F-8FFC1A7786EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C27619B5-E26F-41BE-B2A2-90D94CD73636}

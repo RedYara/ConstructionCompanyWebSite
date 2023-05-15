@@ -25,7 +25,7 @@ namespace Diploma.Application.CQRS.Queries.Houses.GetHouseListQuery
             {
                 Houses = await houses.Select(x => new HouseListDto
                 {
-                    Desciption = x.Desciption,
+                    Desciption = x.Desciption.Substring(0, 100),
                     Floors = x.Floors,
                     Name = x.Name,
                     Photos = x.Photos,
