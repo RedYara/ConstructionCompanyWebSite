@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.Persistence", "Dipl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.WebApi", "Diploma.WebApi\Diploma.WebApi.csproj", "{31F08285-9731-442C-A395-B7A05ED33D7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diploma.EmailSender", "Diploma.EmailSender\Diploma.EmailSender.csproj", "{121D8579-49FE-420A-899B-D6BA59CDE7EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.EmailSender", "Diploma.EmailSender\Diploma.EmailSender.csproj", "{121D8579-49FE-420A-899B-D6BA59CDE7EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

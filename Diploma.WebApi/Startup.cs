@@ -62,7 +62,6 @@ namespace Diploma.WebApi
             app.UseCors("AllowAll");
 
             app.UseStaticFiles();
-            app.UseCoreAdminCustomTitle("Групп проект 116 панель администратора");
             app.UseAuthentication();
             app.UseAuthorization();
 

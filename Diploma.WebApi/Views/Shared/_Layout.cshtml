@@ -16,8 +16,8 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-            <div class="container">
-                <a asp-controller="home" asp-action="index" style="text-decoration:none; color:inherit"><i class="fa-solid fa-house"></i> Элитстрой</a>
+            <div class="app-container container-fluid">
+                <a asp-controller="home" asp-action="index" style="text-decoration:none; color:inherit"><i class="fa-solid fa-house"></i> ЕВРОДОМ</a>
 
                 <button class="navbar-toggler ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index"><i class="fa-regular fa-address-card"></i> Контакты</a>
+                            <a class="nav-link" asp-action="Contacts"><i class="fa-regular fa-address-card"></i> Контакты</a>
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -45,5 +45,11 @@
     <main role="main" class="mt-4 pb-4" style="width:100%">
         @RenderBody()
     </main>
+    <footer class="text-center py-3">
+        <hr/>
+  <div class="container">
+    <p class="mb-0">&copy; 2023 Евродом. Все права защищены.</p>
+  </div>
+</footer>
 </body>
 </html>

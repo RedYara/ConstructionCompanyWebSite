@@ -2,7 +2,6 @@
 using Diploma.Application.CQRS.Commands.Review.CreateReview;
 using Diploma.Application.CQRS.Queries.BathsAndHouses;
 using Diploma.Persistence;
-using FluentEmail.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,13 +12,11 @@ namespace Diploma.WebApi.Controllers
     {
         private readonly IMapper _mapper;
         private readonly DiplomaDbContext _dbContext;
-        private IFluentEmail _fluentEmail;
 
-        public HomeController(IMapper mapper, DiplomaDbContext dbContext, IFluentEmail fluentEmail)
+        public HomeController(IMapper mapper, DiplomaDbContext dbContext)
         {
             _mapper = mapper;
             _dbContext = dbContext;
-            _fluentEmail = fluentEmail;
         }
 
         [HttpGet]
@@ -30,6 +27,12 @@ namespace Diploma.WebApi.Controllers
             var vm = await Mediator.Send(query);
 
             return View(vm);
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Contacts()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -42,12 +45,6 @@ namespace Diploma.WebApi.Controllers
             };
             await Mediator.Send(query);
 
-           await Email
-    .From("john@email.com")
-    .To("bob@email.com", "bob")
-    .Subject("hows it going bob")
-    .Body("yo bob, long time no see!")
-    .SendAsync();
             return RedirectToAction("index");
         }
     }
