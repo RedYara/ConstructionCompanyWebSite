@@ -1,4 +1,4 @@
-﻿@model Diploma.Application.CQRS.Queries.BathsAndHouses.BathsAndHousesVm;
+﻿@model Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery.BuildingListVm;
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -59,16 +59,14 @@
         </tr>
     </tbody>
 </table>
-<div class="app-container container-fluid">
+<div class="app-container container-fluid pb-3">
     <div class="mb-4" style="text-align:center">
         <h1>Наш каталог проектов</h1>
     </div>
     <div class="image-grid">
-        @foreach (var building in Model.BathsAndHouses)
+        @foreach (var building in Model.Buildings)
         {
-            @if (building.BuildingType == "House")
-            {
-                <a class="image-container" asp-controller="house" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
+                <a class="image-container" asp-controller="building" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
                 <img src="data:image/png;base64, @building.Preview" />
                 <div class="info-box-right">
                     @building.Name
@@ -80,22 +78,6 @@
                     <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
                 </div>
                 </a>
-            }
-            else
-            {
-                <a class="image-container" asp-controller="bath" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
-                    <img src="data:image/png;base64, @building.Preview" />
-                    <div class="info-box-right">
-                        @building.Name
-                    </div>
-                    <div class="info-box-description">
-                        @building.Desciption
-                    </div>
-                    <div class="info-box-bottom">
-                        <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
-                    </div>
-                </a>
-            }
         }
     </div>
 
@@ -105,12 +87,10 @@
     @foreach (var review in Model.Reviews)
     {
         <div class="review">
-            <div class="rating">
                 @for (int i = 1; i <= 5; i++)
                 {
                     <span class="star @(review.Rating >= i ? "selected" : "")">&#9733;</span>
                 }
-            </div>
             <p>@review.Text</p>
         </div>
     }
@@ -131,7 +111,9 @@
             <textarea class="form-control" id="text" name="text"></textarea>
         </div>
 
-        <button type="submit">Отправить</button>
+        <div class="text-end mt-2 pb-4">
+            <button class="btn btn-primary" type="submit">Отправить</button>
+        </div>
     </form>
 
 
@@ -158,7 +140,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const stars = document.querySelectorAll(".star");
+        const stars = document.querySelectorAll(".rating .star");
 
         stars.forEach(function (star) {
             star.addEventListener("mouseover", function () {

@@ -19,14 +19,12 @@ namespace Diploma.Application.CQRS.Commands.Comment.CreateComment
         }
         public async Task<bool> Handle(CreateCommentComand request, CancellationToken cancellationToken)
         {
-            if (request.BuildingType == "House")
-            {
-                var house = _dbContext.Houses.FirstOrDefault(x => x.Id == request.BuildingId);
-                if (house.Comments == null)
+                var building = _dbContext.Buildings.FirstOrDefault(x => x.Id == request.BuildingId);
+                if (building.Comments == null)
                 {
-                    house.Comments = new List<Domain.Comment>();
+                    building.Comments = new List<Domain.Comment>();
                 }
-                house.Comments.Add(new Domain.Comment
+                building.Comments.Add(new Domain.Comment
                 {
                     BuildingId = request.BuildingId,
                     Content = request.Content,
@@ -34,23 +32,6 @@ namespace Diploma.Application.CQRS.Commands.Comment.CreateComment
                     Name = request.Name,
                 });
                 await _dbContext.SaveChangesAsync(cancellationToken);
-            }
-            else
-            {
-                var bath = _dbContext.Baths.FirstOrDefault(x => x.Id == request.BuildingId);
-                if (bath.Comments == null)
-                {
-                    bath.Comments = new List<Domain.Comment>();
-                }
-                bath.Comments.Add(new Domain.Comment
-                {
-                    BuildingId = request.BuildingId,
-                    Content = request.Content,
-                    Email = request.Email,
-                    Name = request.Name,
-                });
-                await _dbContext.SaveChangesAsync(cancellationToken);
-            }
             return true;
         }
     }

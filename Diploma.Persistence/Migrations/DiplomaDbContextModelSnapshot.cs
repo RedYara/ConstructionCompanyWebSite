@@ -23,7 +23,7 @@ namespace Diploma.Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Diploma.Domain.Bath", b =>
+            modelBuilder.Entity("Diploma.Domain.Building", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,6 +34,9 @@ namespace Diploma.Persistence.Migrations
                         .HasColumnType("text");
 
                     b.Property<int>("Floors")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("GroupTypeId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
@@ -58,16 +61,15 @@ namespace Diploma.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Baths");
+                    b.HasIndex("GroupTypeId");
+
+                    b.ToTable("Buildings");
                 });
 
             modelBuilder.Entity("Diploma.Domain.Comment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("BathId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("BuildingId")
@@ -81,58 +83,32 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("HouseId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BathId");
-
-                    b.HasIndex("HouseId");
+                    b.HasIndex("BuildingId");
 
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("Diploma.Domain.House", b =>
+            modelBuilder.Entity("Diploma.Domain.GroupType", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Desciption")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Floors")
                         .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<List<string>>("Photos")
-                        .IsRequired()
-                        .HasColumnType("text[]");
-
-                    b.Property<string>("Preview")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Size")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Square")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Houses");
+                    b.ToTable("GroupTypes");
                 });
 
             modelBuilder.Entity("Diploma.Domain.Order", b =>
@@ -396,15 +372,24 @@ namespace Diploma.Persistence.Migrations
                     b.HasDiscriminator().HasValue("User");
                 });
 
+            modelBuilder.Entity("Diploma.Domain.Building", b =>
+                {
+                    b.HasOne("Diploma.Domain.GroupType", "GroupType")
+                        .WithMany()
+                        .HasForeignKey("GroupTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GroupType");
+                });
+
             modelBuilder.Entity("Diploma.Domain.Comment", b =>
                 {
-                    b.HasOne("Diploma.Domain.Bath", null)
+                    b.HasOne("Diploma.Domain.Building", null)
                         .WithMany("Comments")
-                        .HasForeignKey("BathId");
-
-                    b.HasOne("Diploma.Domain.House", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("HouseId");
+                        .HasForeignKey("BuildingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -458,12 +443,7 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Diploma.Domain.Bath", b =>
-                {
-                    b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("Diploma.Domain.House", b =>
+            modelBuilder.Entity("Diploma.Domain.Building", b =>
                 {
                     b.Navigation("Comments");
                 });

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.CQRS.Commands.Review.CreateReview;
-using Diploma.Application.CQRS.Queries.BathsAndHouses;
+using Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +23,7 @@ namespace Diploma.WebApi.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
-            var query = new GetBathsAndHousesQuery();
+            var query = new GetBuildingsListQuery();
             var vm = await Mediator.Send(query);
 
             return View(vm);
@@ -36,6 +36,7 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateReview(int rating, string text)
         {
             var query = new CreateReviewCommand()

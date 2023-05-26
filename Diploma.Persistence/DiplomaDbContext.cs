@@ -10,8 +10,10 @@ namespace Diploma.Persistence
     public class DiplomaDbContext : IdentityDbContext<IdentityUser>, IDiplomaDbContext
     {
         public DbSet<Order> Orders { get; set; }
-        public DbSet<House> Houses { get; set; }
-        public DbSet<Bath> Baths { get; set; }
+        //public DbSet<House> Houses { get; set; }
+        //public DbSet<Bath> Baths { get; set; }
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<GroupType> GroupTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Review> Reviews { get; set; }
