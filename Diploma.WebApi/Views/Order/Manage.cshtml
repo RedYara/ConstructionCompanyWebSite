@@ -10,8 +10,8 @@
             <p>Панель администратора</p>
         </div>
         <div class="card-body">
-            <div class="btn-group">
-                <div class="dropdown">
+            <div class="d-flex">
+                <div class="dropdown me-4">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Строения
                       </button>
@@ -20,12 +20,12 @@
                         <li><a class="dropdown-item" asp-controller="Building" asp-action="Create">Добавить строение</a></li>
                       </ul>
                 </div>
-                <div class="dropdown">
+                <div class="dropdown me-4">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Строения
+                        Типы групп
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Index">Список групп</a></li>
+                        <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Index">Список типов</a></li>
                         <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Create">Добавить тип групп</a></li>
                       </ul>
                 </div>
@@ -43,6 +43,12 @@
                     Номер телефона
                 </th>
                 <th>
+                    Электронная почта
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
                     Действие
                 </th>
             </tr>
@@ -58,11 +64,37 @@
                         @Html.DisplayFor(modelItem => item.Phone)
                     </td>
                     <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(modelItem => item.Status, new SelectList(new[]{ new SelectListItem{Value = "В обработке", Text="В обработке"}, new SelectListItem{Value="Выполнен", Text="Выполнен"},new SelectListItem{Value="Отклонен", Text="Отклонен"}}, "Value", "Text"), new {@class = "form-control", id = "statusList", onchange=$"changeStatus({item.Id})"})
+                    </td>
+                    <td>
                         <a asp-action="OrderComplete" asp-route-id="@item.Id" title="Заказ выполнен"><i class="fa-solid fa-check"></i></a>
-                            <a asp-controller="Building" asp-action="Details" asp-route-id="@item.BuildingId" title="Просмотреть здание"><i class="fa-regular fa-eye"></i></a>
+                        <a asp-controller="Building" asp-action="Details" asp-route-id="@item.BuildingId" title="Просмотреть здание"><i class="fa-regular fa-eye"></i></a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+
+<script type="text/javascript">
+    function changeStatus(id){
+        var value = $("#statusList").val();
+        $.ajax({
+            url: '/Order/ChangeOrderStatus?id=' + id + "&value=" + value,
+            type: "Post",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (xhr, status, error) {
+                console.log(data);
+            },
+            complete: function (data) {
+            }
+        });
+    }
+
+
+</script>
 </div>

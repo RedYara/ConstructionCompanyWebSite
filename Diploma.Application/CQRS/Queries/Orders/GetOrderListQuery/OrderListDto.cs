@@ -6,11 +6,13 @@ namespace Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery
 {
     public class OrderListDto : IMapWith<Order>
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public Guid BuildingId { get; set; }
         public string BuildingType { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Status { get; set; }
         public DateTime CreationDate { get; set; }
         public void Mapping(Profile profile)
         {
@@ -26,7 +28,11 @@ namespace Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery
                 .ForMember(x => x.CreationDate,
                 opt => opt.MapFrom(order => order.CreationDate))
                 .ForMember(x => x.BuildingType,
-                opt => opt.MapFrom(order => order.BuildingType));
+                opt => opt.MapFrom(order => order.BuildingType))
+                .ForMember(x => x.Email,
+                opt => opt.MapFrom(order => order.Email))
+                .ForMember(x => x.Status,
+                opt => opt.MapFrom(order => order.Status));
         }
     }
 }

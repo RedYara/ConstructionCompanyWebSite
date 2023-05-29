@@ -9,6 +9,6 @@ namespace Diploma.Application.CQRS.Commands.Order.DeleteOrder
 {
     public class DeleteOrderCommand : IRequest<bool>
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
     }
 }

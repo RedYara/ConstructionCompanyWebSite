@@ -1,0 +1,115 @@
+﻿@model Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery.BuildingDetailsVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="~/js/input-mask.js"></script>
+
+<style>
+    .swiper .swiper-slide > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+</style>
+<input type="hidden" id="buildingId" value="@Model.Id" />
+<div style="text-align:center">
+    <h1> Вы действительно хотите удалить? </h1>
+</div>
+<div class="app-container container-fluid" style="margin-top:5%">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="swiper mySwiper" style="--swiper-navigation-color: green;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" /></div>
+                    @foreach (var item in Model.Photos)
+                    {
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" loading="lazy"/></div>
+                    }
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="data:image/png;base64, @Model.Preview" loading="lazy" /></div>
+                    @foreach (var item in Model.Photos)
+                    {
+                        <div class="swiper-slide"><img src="data:image/png;base64, @item" loading="lazy"/></div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>@Model.Name</h1>
+            <table class="table">
+                <tr>
+                    <td>
+                        Площадь:
+                    </td>
+                    <td>
+                        @Model.Square  м²
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Количество этажей:
+                    </td>
+                    <td>
+                        @Model.Floors
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Размерность:
+                    </td>
+                    <td>
+                        @Model.Size
+                    </td>
+                </tr>
+            </table>
+            <form asp-action="DeleteBuilding" method="post">
+                @Html.HiddenFor(x => x.Id)
+                <button type="submit" class="btn btn-danger w-100" >Удалить</button>
+            </form>
+        </div>
+    </div>
+    <hr />
+   
+</div>
+
+@{
+    string domainName = Context.Request.Scheme + "://" + Context.Request.Host;
+}
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper2,
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        spaceBetween: 10,
+    });
+</script>

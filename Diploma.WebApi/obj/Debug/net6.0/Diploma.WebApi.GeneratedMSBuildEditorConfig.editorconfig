@@ -32,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Building/Catalog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVpbGRpbmdcQ2F0YWxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Building/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVpbGRpbmdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Building/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVpbGRpbmdcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/C\# projects/DiplomaWork/Diploma.WebApi/Views/Building/Details.cshtml]

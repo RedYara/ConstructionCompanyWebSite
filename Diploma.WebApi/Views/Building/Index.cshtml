@@ -10,8 +10,8 @@
             <p>Панель администратора</p>
         </div>
         <div class="card-body">
-            <div class="btn-group">
-                <div class="dropdown">
+            <div class="d-flex">
+                <div class="dropdown me-4">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Строения
                       </button>
@@ -20,12 +20,12 @@
                         <li><a class="dropdown-item" asp-controller="Building" asp-action="Create">Добавить строение</a></li>
                       </ul>
                 </div>
-                <div class="dropdown">
+                <div class="dropdown me-4">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Строения
+                        Типы групп
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Index">Список групп</a></li>
+                        <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Index">Список типов</a></li>
                         <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Create">Добавить тип групп</a></li>
                       </ul>
                 </div>
@@ -45,25 +45,26 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var house in Model.Buildings){
+            @foreach (var building in Model.Buildings){
             <tr>
                 <td scope="row">
-                    <img src="data:image/png;base64, @house.Preview" width="200px" height="200px" />
+                    <img src="data:image/png;base64, @building.Preview" width="200px" height="200px" />
                 </td>
                 <td>
-                    @house.Name
+                    @building.Name
                 </td>
                 <td>
-                    @house.Desciption...
+                    @building.Desciption...
                 </td>
                 <td>
-                    @house.Size
+                    @building.Size
                 </td>
                 <td>
-                    @house.Square
+                    @building.Square
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@house.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
+                    <a asp-action="Edit" asp-route-id="@building.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
+                    <a asp-action="Delete" asp-route-id="@building.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
                 </td>
             </tr>
             }

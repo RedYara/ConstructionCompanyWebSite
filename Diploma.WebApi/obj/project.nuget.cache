@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g1by0ph9oouwdUHU1gQ6t9/Tlw3cOlNUJtS0fsJDePjSPy4b5nDFs/pxeX0Ud4+NiJOLEZTyzDqZYkFfqWpU1w==",
+  "dgSpecHash": "S9CfehEJy2Gjqs/pvXq+6saq8riDbi3RGGk2MHDvID9bngZN3mtYQ29Qc3C9eH4RC5ffAU3mMx66BNuPgEHc+Q==",
   "success": true,
   "projectFilePath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\LattePanda\\.nuget\\packages\\coreadmin\\2.7.0\\coreadmin.2.7.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\LattePanda\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\mailkit\\4.0.0\\mailkit.4.0.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
@@ -71,7 +72,9 @@
     "C:\\Users\\LattePanda\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
     "C:\\Users\\LattePanda\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "C:\\Users\\LattePanda\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+    "C:\\Users\\LattePanda\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\LattePanda\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512",
+    "C:\\Users\\LattePanda\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
   ],
   "logs": []
 }

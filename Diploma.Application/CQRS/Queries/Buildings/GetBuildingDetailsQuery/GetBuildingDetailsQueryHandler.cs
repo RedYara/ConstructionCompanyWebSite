@@ -18,10 +18,10 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery
 
         public async Task<BuildingDetailsVm> Handle (GetBuildingDetailsQuery request, CancellationToken cancellationToken)
         {
-            var house = await _dbContext.Buildings.Include(x => x.Comments).Include(x => x.GroupType).FirstOrDefaultAsync(x => x.Id == request.Id);
+            var building = await _dbContext.Buildings.Include(x => x.Comments).Include(x => x.GroupType).FirstOrDefaultAsync(x => x.Id == request.Id);
             
 
-            return _mapper.Map<BuildingDetailsVm>(house);
+            return _mapper.Map<BuildingDetailsVm>(building);
         }
     }
 }

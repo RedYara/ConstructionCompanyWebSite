@@ -31,10 +31,13 @@
                             <li class="nav-item active">
                                 <a class="nav-link" asp-action="Contacts"><i class="fa-regular fa-address-card"></i> Контакты</a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" asp-controller="Building" asp-action="Catalog"><i class="fa-solid fa-list"></i> Каталог</a>
+                            </li>
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <li class="nav-item active">
-                                    <a class="nav-link" asp-controller="Order" asp-action="Manage"><i class="fa-solid fa-truck"></i> Заказы</a>
+                                    <a class="nav-link" asp-controller="Order" asp-action="Manage"><i class="fa-solid fa-user-secret"></i> Панель администратора</a>
                                 </li>
                             }
                         </ul>

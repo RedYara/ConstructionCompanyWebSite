@@ -14,10 +14,10 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery
         public string Square { get; set; }
         public string Size { get; set; }
         public int Floors { get; set; }
-        public List<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<House, BuildingDetailsVm>()
+            profile.CreateMap<Building, BuildingDetailsVm>()
                 .ForMember(x => x.Id,
                 opt => opt.MapFrom(order => order.Id))
                 .ForMember(x => x.Name,

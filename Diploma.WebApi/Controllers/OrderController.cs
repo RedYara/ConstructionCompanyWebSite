@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Diploma.Application.CQRS.Commands.Order.ChangeOrderStatus;
 using Diploma.Application.CQRS.Commands.Order.CreateOrder;
 using Diploma.Application.CQRS.Commands.Order.DeleteOrder;
 using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
@@ -40,14 +41,15 @@ namespace Diploma.WebApi.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> CreateOrder(Guid BuildingId, string name, string phone, string buildingType)
+        public async Task<IActionResult> CreateOrder(Guid BuildingId, string name, string phone, string buildingType, string email)
         {
             var query = new CreateOrderCommand()
             {
                 BuildingId = BuildingId,
                 Name = name,
                 Phone = phone,
-                BuildingType = buildingType
+                BuildingType = buildingType,
+                Email = email
                 
             };
             await Mediator.Send(query); 
@@ -59,11 +61,18 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> OrderComplete (Guid Id)
+        public async Task<IActionResult> OrderComplete (int Id)
         {
             var query = new DeleteOrderCommand() { Id = Id };
             await Mediator.Send(query);
             return Redirect("Manage");
+        }
+
+        [HttpPost]
+        public async Task ChangeOrderStatus(int Id, string value)
+        {
+            var command = new ChangeOrderStatusCommand() { Id = Id, Value = value };
+            await Mediator.Send(command);
         }
     }
 }
