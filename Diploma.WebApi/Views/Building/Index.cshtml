@@ -21,13 +21,22 @@
                       </ul>
                 </div>
                 <div class="dropdown me-4">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Товары
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" asp-controller="Product" asp-action="Index">Список товаров</a></li>
+                        <li><a class="dropdown-item" asp-controller="Product" asp-action="Create">Добавить товар</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown me-4">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
                         Типы групп
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                         <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Index">Список типов</a></li>
                         <li><a class="dropdown-item" asp-controller="GroupType" asp-action="Create">Добавить тип групп</a></li>
-                      </ul>
+                    </ul>
                 </div>
                 <a class="btn btn-primary" asp-controller="Order" asp-action="Manage">Заказы</a>
             </div>
@@ -64,7 +73,7 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@building.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
-                    <a asp-action="Delete" asp-route-id="@building.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
+                        <a asp-action="Delete" asp-route-id="@building.Id" class="btn"><i class="fa-solid fa-trash-can" style="color: #1e3050;"></i></a>
                 </td>
             </tr>
             }

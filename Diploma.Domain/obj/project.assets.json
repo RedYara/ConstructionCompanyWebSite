@@ -1899,19 +1899,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LattePanda\\.nuget\\packages\\": {}
+    "C:\\Users\\yarud\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
       "projectName": "Diploma.Domain",
-      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
-      "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
-      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\obj\\",
+      "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
+      "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

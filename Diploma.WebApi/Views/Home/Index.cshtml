@@ -25,40 +25,34 @@
         Компания "ЕВРОДОМ" является лидером в своей области благодаря нашей компетентности и качеству наших услуг. Мы гарантируем, что Ваш дом будет построен в срок и с высочайшим качеством, которое соответствует Вашим ожиданиям и бюджету. Обратитесь к нам и мы поможем Вам создать свой мечтательный дом.
     </p>
 
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <img src="~/images/badge.png" class="img-fluid" alt="App Icon">
+            <span>
+                Опыт работы на рынке более 10 лет
+            </span>
+        </div>
+        <div class="col text-center">
+            <img src="~/images/shield.png" class="img-fluid" alt="App Icon">
+            <span>
+                Гарантия качества
+            </span>
+        </div>
+        <div class="col text-center">
+            <img src="~/images/video-camera.png" class="img-fluid" alt="App Icon">
+            <span>
+                Следим за порядком строительства
+            </span>
+        </div>
+        <div class="col text-center">
+            <img src="~/images/like.png" class="img-fluid" alt="App Icon">
+            <span>
+                Более 90% положительных отзывов
+            </span>
+        </div>
+    </div>
 </div>
 
-<table class="table app-container container-fluid">
-    <thead>
-        <tr>
-            <th class="px-4"><img src="~/images/badge.png" width="50%" /></th>
-            <th class="px-4">
-                <img src="~/images/shield.png" width="50%" />
-            </th>
-            <th class="px-4">
-                <img src="~/images/video-camera.png" style="max-width:40%" />
-            </th>
-            <th class="px-4">
-                <img src="~/images/like.png" style="max-width:40%" />
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th class="px-4">
-                Опыт работы на рынке более 10 лет
-            </th>
-            <th class="px-4">
-                Гарантия качества
-            </th>
-            <th class="px-4">
-                Следим за порядком строительства
-            </th>
-            <th class="px-4">
-                Более 90% положительных отзывов
-            </th>
-        </tr>
-    </tbody>
-</table>
 <div class="app-container container-fluid pb-3">
     <div class="mb-4" style="text-align:center">
         <h1>Наш каталог проектов</h1>
@@ -66,7 +60,7 @@
     <div class="image-grid">
         @foreach (var building in Model.Buildings)
         {
-                <a class="image-container" asp-controller="building" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
+            <a class="image-container" asp-controller="building" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
                 <img src="data:image/png;base64, @building.Preview" />
                 <div class="info-box-right">
                     @building.Name
@@ -77,7 +71,7 @@
                 <div class="info-box-bottom">
                     <i class="fa-solid fa-arrow-up-right-dots"></i> @building.Floors этажей <i class="fa-solid fa-maximize"></i> Размер @building.Size <i class="fa-regular fa-square"></i> @building.Square м²
                 </div>
-                </a>
+            </a>
         }
     </div>
 
@@ -86,33 +80,41 @@
     </div>
     @foreach (var review in Model.Reviews)
     {
-        <div class="review">
-                @for (int i = 1; i <= 5; i++)
-                {
-                    <span class="star @(review.Rating >= i ? "selected" : "")">&#9733;</span>
-                }
-            <p>@review.Text</p>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="review">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <span class="star @(review.Rating >= i ? "selected" : "")">&#9733;</span>
+                    }
+                <p>@review.Text</p>
+                </div>
+            </div>
         </div>
     }
 
     <form method="post" asp-action="CreateReview">
-        <div class="rating">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
-        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <div class="rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
 
-        <input type="hidden" id="rating" name="rating" value="0" />
+                <input type="hidden" id="rating" name="rating" value="0" />
 
-        <div>
-            <label for="text">Ваш отзыв:</label>
-            <textarea class="form-control" id="text" name="text"></textarea>
-        </div>
+                <div>
+                    <label for="text">Ваш отзыв:</label>
+                    <textarea class="form-control" id="text" name="text"></textarea>
+                </div>
 
-        <div class="text-end mt-2 pb-4">
-            <button class="btn btn-primary" type="submit">Отправить</button>
+                <div class="text-end mt-2">
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </div>
+            </div>
         </div>
     </form>
 

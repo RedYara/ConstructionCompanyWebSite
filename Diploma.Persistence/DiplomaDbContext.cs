@@ -13,6 +13,7 @@ namespace Diploma.Persistence
         //public DbSet<House> Houses { get; set; }
         //public DbSet<Bath> Baths { get; set; }
         public DbSet<Building> Buildings { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<GroupType> GroupTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Comment> Comments { get; set; }

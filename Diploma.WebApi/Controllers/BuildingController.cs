@@ -99,9 +99,17 @@ namespace Diploma.WebApi.Controllers
             await Mediator.Send(command);
             return Redirect("index");
         }
+        [AllowAnonymous]
         public IActionResult Catalog(string sortBy, int? page, string search)
         {
             var buildings = _dbContext.Buildings.ToList();
+            foreach(var building in buildings)
+            {
+                if (building.Desciption.Length < 100) 
+                    building.Desciption = building.Desciption.Substring(0, building.Desciption.Length);
+                else 
+                    building.Desciption = building.Desciption.Substring(0, 100);
+            }
             ViewBag.SortBy = sortBy;
             ViewBag.SortByDescending = false;
 

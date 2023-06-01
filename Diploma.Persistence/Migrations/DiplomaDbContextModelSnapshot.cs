@@ -87,9 +87,14 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BuildingId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Comments");
                 });
@@ -150,6 +155,37 @@ namespace Diploma.Persistence.Migrations
                     b.HasIndex("Id");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("GroupTypeId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Preview")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupTypeId");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Diploma.Domain.Review", b =>
@@ -400,6 +436,21 @@ namespace Diploma.Persistence.Migrations
                         .HasForeignKey("BuildingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Diploma.Domain.Product", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId");
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Product", b =>
+                {
+                    b.HasOne("Diploma.Domain.GroupType", "GroupType")
+                        .WithMany()
+                        .HasForeignKey("GroupTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GroupType");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -454,6 +505,11 @@ namespace Diploma.Persistence.Migrations
                 });
 
             modelBuilder.Entity("Diploma.Domain.Building", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("Diploma.Domain.Product", b =>
                 {
                     b.Navigation("Comments");
                 });

@@ -13,6 +13,7 @@ namespace Diploma.Application.Interfaces
         DbSet<User> Users { get; set; }
         DbSet<Comment> Comments { get; set; }
         DbSet<Review> Reviews { get; set; }
+        DbSet<Product> Products { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

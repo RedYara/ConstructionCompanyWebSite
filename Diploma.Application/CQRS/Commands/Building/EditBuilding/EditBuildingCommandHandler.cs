@@ -19,28 +19,47 @@ namespace Diploma.Application.CQRS.Commands.Building.EditBuilding
         }
         public async Task<bool> Handle(EditBuildingCommand request, CancellationToken cancellationToken)
         {
-            var bath = await _dbContext.Buildings.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var building = await _dbContext.Buildings.FirstOrDefaultAsync(x => x.Id == request.Id);
 
-            if (bath.Name != request.Name)
-                bath.Name = request.Name;
+            if (building.Name != request.Name)
+                building.Name = request.Name;
 
-            if (bath.Photos != request.Photos)
-                bath.Photos = request.Photos;
+            if (request.Photos != null)
+            {
+                List<string> photos = new();
+                foreach (var photo in request.Photos)
+                {
+                    using MemoryStream ms = new();
+                    photo.CopyTo(ms);
+                    var fileBytes = ms.ToArray();
+                    var iconBase64 = Convert.ToBase64String(fileBytes);
+                    photos.Add(iconBase64);
+                }
+                building.Photos = photos;
+            }
 
-            if (bath.Preview != request.Preview)
-                bath.Preview = request.Preview;
+            if (request.Preview != null)
+            {
 
-            if (bath.Desciption != request.Desciption)
-                bath.Desciption = request.Desciption;
+                using MemoryStream previewMs = new();
+                request.Preview.CopyTo(previewMs);
+                var fileBytesPreview = previewMs.ToArray();
+                var previewIconBase64 = Convert.ToBase64String(fileBytesPreview); 
+                building.Preview = previewIconBase64;
+            }
+                
 
-            if (bath.Floors != request.Floors)
-                bath.Floors = request.Floors;
+            if (building.Desciption != request.Desciption)
+                building.Desciption = request.Desciption;
 
-            if (bath.Size != request.Size)
-                bath.Size = request.Size;
+            if (building.Floors != request.Floors)
+                building.Floors = request.Floors;
 
-            if (bath.Square != request.Square)
-                bath.Square = request.Square;
+            if (building.Size != request.Size)
+                building.Size = request.Size;
+
+            if (building.Square != request.Square)
+                building.Square = request.Square;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
             return true;

@@ -25,4 +25,8 @@
 		<ProjectReference Include="..\Diploma.Application\Diploma.Application.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Migrations\" />
+	</ItemGroup>
+
 </Project>

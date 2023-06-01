@@ -35,6 +35,7 @@ namespace Diploma.WebApi
                 options.LogoutPath = $"/Account/Logout";
                 options.AccessDeniedPath = $"/Account/AccessDenied";
             });
+            services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
             services.AddScoped<IMailSender, MailSender>();
 

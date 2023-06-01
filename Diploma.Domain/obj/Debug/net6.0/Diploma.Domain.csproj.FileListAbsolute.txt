@@ -10,3 +10,15 @@ D:\C# projects\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.dll
 D:\C# projects\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\refint\Diploma.Domain.dll
 D:\C# projects\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.pdb
 D:\C# projects\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\ref\Diploma.Domain.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\bin\Debug\net6.0\Diploma.Domain.deps.json
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\bin\Debug\net6.0\Diploma.Domain.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\bin\Debug\net6.0\Diploma.Domain.pdb
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.csproj.AssemblyReference.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.AssemblyInfoInputs.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.AssemblyInfo.cs
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\refint\Diploma.Domain.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\Diploma.Domain.pdb
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Domain\obj\Debug\net6.0\ref\Diploma.Domain.dll

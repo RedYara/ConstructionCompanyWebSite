@@ -13,3 +13,18 @@ D:\C# projects\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Applicat
 D:\C# projects\DiplomaWork\Diploma.Application\obj\Debug\net6.0\refint\Diploma.Application.dll
 D:\C# projects\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.pdb
 D:\C# projects\DiplomaWork\Diploma.Application\obj\Debug\net6.0\ref\Diploma.Application.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\bin\Debug\net6.0\Diploma.Application.deps.json
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\bin\Debug\net6.0\Diploma.Application.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\bin\Debug\net6.0\Diploma.Application.pdb
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\bin\Debug\net6.0\Diploma.Domain.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\bin\Debug\net6.0\Diploma.Domain.pdb
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.csproj.AssemblyReference.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.AssemblyInfoInputs.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.AssemblyInfo.cs
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.csproj.CoreCompileInputs.cache
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.csproj.CopyComplete
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\refint\Diploma.Application.dll
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\Diploma.Application.pdb
+C:\Users\yarud\source\repos\DiplomaWork\Diploma.Application\obj\Debug\net6.0\ref\Diploma.Application.dll

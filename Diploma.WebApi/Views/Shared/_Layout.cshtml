@@ -1,58 +1,61 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8" ? />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-        <script src="~/lib//jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-                <div class="app-container container-fluid">
-                    <a asp-controller="home" asp-action="index" style="text-decoration:none; color:inherit"><i class="fa-solid fa-house"></i> ЕВРОДОМ</a>
-    
-                    <button class="navbar-toggler ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<head>
+    <meta charset="utf-8" ? />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib//jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+            <div class="app-container container-fluid">
+                <a asp-controller="home" asp-action="index" style="text-decoration:none; color:inherit"><i class="fa-solid fa-house"></i> ЕВРОДОМ</a>
+
+                <button class="navbar-toggler ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contacts"><i class="fa-regular fa-address-card"></i> Контакты</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-controller="Building" asp-action="Catalog"><i class="fa-solid fa-list"></i> Каталог строений</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-controller="Product" asp-action="Catalog"><i class="fa-solid fa-list"></i> Каталог товаров</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
                             <li class="nav-item active">
-                                <a class="nav-link" asp-action="Contacts"><i class="fa-regular fa-address-card"></i> Контакты</a>
+                                <a class="nav-link" asp-controller="Order" asp-action="Manage"><i class="fa-solid fa-user-secret"></i> Панель администратора</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" asp-controller="Building" asp-action="Catalog"><i class="fa-solid fa-list"></i> Каталог</a>
-                            </li>
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                <li class="nav-item active">
-                                    <a class="nav-link" asp-controller="Order" asp-action="Manage"><i class="fa-solid fa-user-secret"></i> Панель администратора</a>
-                                </li>
-                            }
-                        </ul>
-                    </div>
+                        }
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        <main role="main" class="mt-4 pb-4" style="width:100%">
-            @RenderBody()
-        </main>
-        <footer class="text-center py-3 position-absolute bottom-0 w-100">
-            <hr/>
-            <div class="container">
-              <p class="mb-0">&copy; 2023 Евродом. Все права защищены.</p>
             </div>
-        </footer>
-    </body>
+        </nav>
+    </header>
+    <main role="main" class="mt-4" style="width:100%; padding-bottom:4%;">
+        @RenderBody()
+    </main>
+    <footer class="text-center py-3 position-absolute bottom-0 w-100">
+        <hr />
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Евродом. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
 </html>

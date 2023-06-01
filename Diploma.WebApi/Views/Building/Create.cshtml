@@ -6,7 +6,7 @@
 
 <div class="app-container container-fluid" style="margin-top:3%">
     <h3 class="text-center">Добавление строения</h3>
-    
+
     <form asp-action="CreateBuilding" enctype="multipart/form-data" method="post">
         <div class="row">
             <div class="col-md-6">
@@ -20,7 +20,7 @@
                 @Html.ValidationMessageFor(m => m.Size, "", new {@class = "text-danger"})
             </div>
             <div class="col-md-6">
-                @Html.LabelFor(m => m.Square, "Площадь строения")
+                @Html.LabelFor(m => m.Square, "Площадь строения (м²)")
                 @Html.TextBoxFor(m => m.Square, "Укажите площадь строения", new {@class = "form-control"})
                 @Html.ValidationMessageFor(m => m.Square, "", new {@class = "text-danger"})
             </div>
@@ -30,7 +30,7 @@
                     <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Добавить группу
                     </button>
-                    <select class="form-control valid" asp-for="GroupTypeId" id="Groups" >
+                    <select class="form-control valid" asp-for="GroupTypeId" id="Groups">
                     </select>
                     <span asp-validation-for="GroupTypeId" class="text-danger"></span>
                 </div>
@@ -63,34 +63,34 @@
         <div class="text-end">
             <button type="submit" class="btn btn-primary mt-4">Добавить дом</button>
         </div>
-    
+
     </form>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Добавить группу</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="col">
-                    <div class="row">
-                        <label class="control-label">Название группы</label>
-                        <input id="groupName" class="form-control" type="text" />
-                    </div>
-                    <div class="row"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Добавить группу</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="createGroup()">Добавить</button>
+                <div class="modal-body">
+                    <div class="col">
+                        <div class="row">
+                            <label class="control-label">Название группы</label>
+                            <input id="groupName" class="form-control" type="text" />
+                        </div>
+                        <div class="row"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="createGroup()">Добавить</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div>
 <script type="text/javascript">
-     $(document).ready(function () {
+    $(document).ready(function () {
         appendGroupList();
     });
     function appendGroupList() {
@@ -115,18 +115,18 @@
         })
     };
     function createGroup() {
-    var value = document.getElementById("groupName").value;
-    $.ajax({
-        url: '/grouptype/CreateGroupTypeAjax?name=' + value,
-        type: "post",
-        success: function (data) {
-        },
-        error: function (xhr, status, error) {
-            console.log(error)
-        },
-        complete: function () {
-            appendGroupList();
-        }
-    });
-};
+        var value = document.getElementById("groupName").value;
+        $.ajax({
+            url: '/grouptype/CreateGroupTypeAjax?name=' + value,
+            type: "post",
+            success: function (data) {
+            },
+            error: function (xhr, status, error) {
+                console.log(error)
+            },
+            complete: function () {
+                appendGroupList();
+            }
+        });
+    };
 </script>

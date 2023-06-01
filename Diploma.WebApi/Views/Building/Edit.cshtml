@@ -7,8 +7,9 @@
 
 <div class="app-container container-fluid" style="margin-top:3%">
     <h3 class="text-center">Редактирование строения</h3>
-    
-    <form asp-action="EditHouse" enctype="multipart/form-data" method="post">
+
+    <form asp-action="EditBuilding" enctype="multipart/form-data" method="post">
+        @Html.HiddenFor(x => x.Id)
         <div class="row">
             <div class="col-md-6">
                 @Html.LabelFor(m => m.Floors, "Количество этажей")
@@ -51,8 +52,8 @@
             </div>
         </div>
         <div class="text-end">
-            <button type="submit" class="btn btn-primary mt-4">Добавить дом</button>
+            <button type="submit" class="btn btn-primary mt-4">Сохранить</button>
         </div>
-    
+
     </form>
 </div>
