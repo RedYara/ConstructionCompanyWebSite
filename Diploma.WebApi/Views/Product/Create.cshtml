@@ -10,19 +10,20 @@
     <form asp-action="CreateProduct" enctype="multipart/form-data" method="post">
         <div class="row">
             <div class="col-md-6">
-                @Html.LabelFor(m => m.Name, "Название продукта")
-                @Html.TextBoxFor(m => m.Name, "Укажите название продукта", new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                @Html.LabelFor(m => m.Name, "Название товара")
+                @Html.TextBoxFor(m => m.Name, "", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Name, "", new {@class = "text-danger"})
             </div>
-            <!-- Add other input fields for properties here -->
-        </div>
-        <div class="row">
             <div class="col-md-6">
-                @Html.LabelFor(m => m.Preview, "Превью продукта")
-                <input asp-for="Preview" type="file" accept="image/*" class="form-control" />
-                @Html.ValidationMessageFor(m => m.Preview, "", new { @class = "text-danger" })
+                @Html.LabelFor(m => m.Price, "Цена товара(в рублях)")
+                @Html.TextBoxFor(m => m.Price, "", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Price, "", new {@class = "text-danger"})
             </div>
-            <!-- Add other file upload inputs for photos here -->
+            <div class="col-md-6">
+                @Html.LabelFor(m => m.Preview, "Превью товара")
+                <input asp-for="Preview" type="file" accept="image/*" class="form-control" />
+                @Html.ValidationMessageFor(m => m.Preview, "", new {@class = "text-danger"})
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6">

@@ -36,6 +36,7 @@ namespace Diploma.Application.CQRS.Commands.Product.EditProduct
             if (request.Price != default)
                 product.Price = request.Price;
 
+            product.GroupType = product.GroupType = await _dbContext.GroupTypes.FirstOrDefaultAsync(x => x.Id == request.GroupTypeId);
 
             if (request.GroupTypeId != product.GroupType.Id)
                 product.GroupType = await _dbContext.GroupTypes.FirstOrDefaultAsync(x => x.Id == request.GroupTypeId);

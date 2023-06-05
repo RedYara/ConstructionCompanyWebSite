@@ -4,6 +4,7 @@ using Diploma.Application.CQRS.Commands.Order.CreateOrder;
 using Diploma.Application.CQRS.Commands.Order.DeleteOrder;
 using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
 using Diploma.Application.Interfaces;
+using Diploma.Domain;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -41,23 +42,22 @@ namespace Diploma.WebApi.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> CreateOrder(Guid BuildingId, string name, string phone, string buildingType, string email)
+        public async Task<IActionResult> CreateOrder(Guid RowId, string name, string phone, string rowType, string email)
         {
             var query = new CreateOrderCommand()
             {
-                BuildingId = BuildingId,
+                RowId = RowId,
                 Name = name,
                 Phone = phone,
-                BuildingType = buildingType,
+                rowType = rowType,
                 Email = email
                 
             };
             await Mediator.Send(query); 
             string domainName = Request.Scheme + "://" + Request.Host;
             await _mailSender.SendEmailAsync("yarudkorolev@gmail.com", "Создан заказ", $"Создан заказ, номер телефона: {phone}, имя заказчика: {name} ");
-
+            await _mailSender.SendEmailAsync(email, $"Информация по заказу", $"Ваш заказ находится в обработке, ожидайте обратной связи.");
             return Redirect($"{domainName}/home/index");
-
         }
 
         [HttpGet]

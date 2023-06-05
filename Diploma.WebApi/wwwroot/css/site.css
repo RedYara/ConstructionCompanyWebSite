@@ -149,7 +149,90 @@ h1 {
     transition: all 0.5s ease-in-out;
     z-index: 1;
 }
+@media(min-width:1800px) {
 
+    .info-box-right {
+        font-size: 300%;
+    }
+
+    .info-box-bottom {
+        font-size: 150%;
+    }
+
+    .info-box-description {
+        font-size: 125%;
+    }
+}
+@media(max-width:1800px) {
+
+    .info-box-right {
+        font-size: 200%;
+    }
+
+    .info-box-bottom {
+        font-size: 100%;
+    }
+
+    .info-box-description {
+        font-size: 75%;
+    }
+}
+@media(max-width:1200px) {
+
+    .info-box-right {
+        font-size: 200%;
+    }
+
+    .info-box-bottom {
+        font-size: 75%;
+    }
+
+    .info-box-description {
+        font-size: 75%;
+    }
+}
+@media(max-width:900px) {
+
+    .info-box-right {
+        font-size: 100%;
+    }
+
+    .info-box-bottom {
+        font-size: 50%;
+    }
+
+    .info-box-description {
+        font-size: 50%;
+    }
+}
+@media(max-width:700px) {
+
+    .info-box-right {
+        font-size: 75%;
+    }
+
+    .info-box-bottom {
+        font-size: 35%;
+    }
+
+    .info-box-description {
+        font-size: 35%;
+    }
+}
+@media(max-width:500px) {
+
+    .info-box-right {
+        font-size: 75%;
+    }
+
+    .info-box-bottom {
+        font-size: 30%;
+    }
+
+    .info-box-description {
+        font-size: 30%;
+    }
+}
 .image-container:hover .info-box-description {
     transform: translateX(-10%);
     opacity: 1;
@@ -176,7 +259,7 @@ h1 {
     
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
 

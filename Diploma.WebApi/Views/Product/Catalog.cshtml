@@ -14,7 +14,7 @@
     <div class="d-flex align-items-center mb-3">
         <label class="me-2">Сортировка по имени:</label>
         <a href="@Url.Action("Catalog", new { sortBy = ViewBag.SortBy == "name" ? "name_desc" : "name" })" class="btn btn-link btn-sort">
-            <i class="fas @((ViewBag.SortBy == "name" && !ViewBag.SortByDescending) || (ViewBag.SortBy == "name_desc" && ViewBag.SortByDescending) ? "fa-sort-down" : "fa-sort-up")"></i>
+            <i class="fas @((ViewBag.SortBy == "name" || ViewBag.SortBy == "name_desc") && ViewBag.SortByDescending ? "fa-sort-down" : "fa-sort-up")"></i>
         </a>
     </div>
 
@@ -22,7 +22,7 @@
     <div class="d-flex align-items-center mb-3">
         <label class="me-2">Сортировка по цене:</label>
         <a href="@Url.Action("Catalog", new { sortBy = ViewBag.SortBy == "price" ? "price_desc" : "price" })" class="btn btn-link btn-sort">
-            <i class="fas @((ViewBag.SortBy == "price" && !ViewBag.SortByDescending) || (ViewBag.SortBy == "price_desc" && ViewBag.SortByDescending) ? "fa-sort-down" : "fa-sort-up")"></i>
+            <i class="fas @((ViewBag.SortBy == "price" || ViewBag.SortBy == "price_desc") && ViewBag.SortByDescending ? "fa-sort-down" : "fa-sort-up")"></i>
         </a>
     </div>
 
@@ -47,7 +47,7 @@
                             <h5 class="card-title">@product.Name</h5>
                             <p class="card-img"><img src="data:image/png;base64, @product.Preview" loading="lazy" height="350" width="375" /></p>
                             <p class="card-text">@product.Description...</p>
-                            <p class="card-text">Price: @product.Price</p>
+                            <p class="card-text">Цена: @product.Price₽</p>
                         </div>
                     </div>
                 </a>

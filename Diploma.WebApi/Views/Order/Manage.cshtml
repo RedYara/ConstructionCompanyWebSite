@@ -80,7 +80,7 @@
                     </td>
                     <td>
                         <a asp-action="OrderComplete" asp-route-id="@item.Id" title="Заказ выполнен"><i class="fa-solid fa-check"></i></a>
-                        <a asp-controller="Building" asp-action="Details" asp-route-id="@item.BuildingId" title="Просмотреть здание"><i class="fa-regular fa-eye"></i></a>
+                        <a asp-controller="@(item.RowType == "0" ? "Building" : "Product")" asp-action="Details" asp-route-id="@item.RowId" title="Просмотреть заказ"><i class="fa-regular fa-eye"></i></a>
                     </td>
                 </tr>
             }

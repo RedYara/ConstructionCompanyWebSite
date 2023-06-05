@@ -42,7 +42,7 @@ namespace Diploma.WebApi.Controllers
                 Id = id
             };
             var vm = await Mediator.Send(query);
-            var viewmodel = _mapper.Map<EditProductCommand>(vm);
+            var viewmodel = _mapper.Map<EditProductDto>(vm);
 
             return View(viewmodel);
         }
@@ -94,7 +94,7 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteBuilding(Guid Id)
+        public async Task<IActionResult> DeleteProduct(Guid Id)
         {
             var command = new DeleteProductCommand() { Id = Id };
             await Mediator.Send(command);
@@ -103,55 +103,49 @@ namespace Diploma.WebApi.Controllers
         [AllowAnonymous]
         public IActionResult Catalog(string sortBy, int? page, string search)
         {
-            try
+            var products = _dbContext.Products.ToList();
+            foreach (var product in products)
             {
-                var products = _dbContext.Products.ToList();
-                int pageNumber = page ?? 1;
-                int pageSize = 10;
-                var pagedProducts = products.ToPagedList(pageNumber, pageSize);
-
-                // Apply search filter
-                if (!string.IsNullOrEmpty(search))
-                {
-                    products = products.Where(p => p.Name.ToLower().Contains(search.ToLower())).ToList();
-                }
-
-                // Apply sorting
-                switch (sortBy)
-                {
-                    case "name":
-                        products = products.OrderBy(p => p.Name).ToList();
-                        ViewBag.SortByDescending = false;
-                        break;
-                    case "name_desc":
-                        products = products.OrderByDescending(p => p.Name).ToList();
-                        ViewBag.SortByDescending = true;
-                        break;
-                    case "price":
-                        products = products.OrderBy(p => p.Price).ToList();
-                        ViewBag.SortByDescending = false;
-                        break;
-                    case "price_desc":
-                        products = products.OrderByDescending(p => p.Price).ToList();
-                        ViewBag.SortByDescending = true;
-                        break;
-                    default:
-                        break;
-                }
-
-                pagedProducts = products.ToPagedList(pageNumber, pageSize);
-
-                return View(pagedProducts);
+                if (product.Description.Length < 100)
+                    product.Description = product.Description.Substring(0, product.Description.Length);
+                else
+                    product.Description = product.Description.Substring(0, 100);
             }
-            catch (Exception ex)
+            ViewBag.SortBy = sortBy;
+            ViewBag.SortByDescending = false;
+
+            if (!string.IsNullOrEmpty(search))
             {
-                var products = new List<Product>();
-                int pageNumber = page ?? 1;
-                int pageSize = 10;
-                var pagedProducts = products.ToPagedList(pageNumber, pageSize);
-
-                return View(pagedProducts);
+                products = products.Where(x => x.Name.ToLower().Contains(search.ToLower())).ToList();
             }
+
+            switch (sortBy)
+            {
+                case "name":
+                    products = products.OrderBy(p => p.Name).ToList();
+                    ViewBag.SortByDescending = false;
+                    break;
+                case "name_desc":
+                    products = products.OrderByDescending(p => p.Name).ToList();
+                    ViewBag.SortByDescending = true;
+                    break;
+                case "price":
+                    products = products.OrderBy(p => p.Price).ToList();
+                    ViewBag.SortByDescending = false;
+                    break;
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.Price).ToList();
+                    ViewBag.SortByDescending = true;
+                    break;
+                default:
+                    break;
+            }
+
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+            var pagedProducts = products.ToPagedList(pageNumber, pageSize);
+
+            return View(pagedProducts);
         }
 
     }

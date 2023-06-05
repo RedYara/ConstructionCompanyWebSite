@@ -56,7 +56,8 @@
                     @groupType.Name
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@groupType.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
+                        <a asp-action="Edit" asp-route-id="@groupType.Id" class="btn"><i class="fa fa-pencil-alt"></i></a>
+                        <a asp-action="Delete" asp-route-id="@groupType.Id" class="btn"><i class="fa-solid fa-trash-can" style="color: #1e3050;"></i></a>
                 </td>
             </tr>
             }

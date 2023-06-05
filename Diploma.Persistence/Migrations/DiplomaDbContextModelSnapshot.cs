@@ -124,13 +124,6 @@ namespace Diploma.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<Guid>("BuildingId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("BuildingType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -142,7 +135,17 @@ namespace Diploma.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("OrderType")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RowId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("RowType")
                         .IsRequired()
                         .HasColumnType("text");
 

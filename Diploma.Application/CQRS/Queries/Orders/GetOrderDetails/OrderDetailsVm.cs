@@ -18,7 +18,7 @@ namespace Diploma.Application.CQRS.Queries.Orders.GetOrderDetails
                 .ForMember(x => x.Id,
                 opt => opt.MapFrom(order => order.Id))
                 .ForMember(x => x.BuildingId,
-                opt => opt.MapFrom(order => order.BuildingId))
+                opt => opt.MapFrom(order => order.RowId))
                 .ForMember(x => x.Name,
                 opt => opt.MapFrom(order => order.Name))
                 .ForMember(x => x.Phone,

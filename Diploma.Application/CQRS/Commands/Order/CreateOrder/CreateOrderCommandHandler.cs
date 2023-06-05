@@ -13,10 +13,10 @@ namespace Diploma.Application.CQRS.Commands.Order.CreateOrder
             var order = new Domain.Order
             {
                 CreationDate = DateTime.Now,
-                BuildingId = request.BuildingId,
+                RowId = request.RowId,
                 Name = request.Name,
                 Phone = request.Phone,
-                BuildingType = request.BuildingType,
+                RowType = request.rowType,
                 Email = request.Email,
                 Status = "В обработке"
             };

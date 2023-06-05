@@ -2,6 +2,7 @@
 using Diploma.Application.CQRS.Commands.Building.CreateBuilding;
 using Diploma.Application.CQRS.Commands.Building.EditBuilding;
 using Diploma.Application.CQRS.Commands.GroupType.CreateGroupType;
+using Diploma.Application.CQRS.Commands.GroupType.DeleteGroupType;
 using Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery;
 using Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery;
 using Diploma.Application.CQRS.Queries.GroupTypes;
@@ -58,6 +59,15 @@ namespace Diploma.WebApi.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var query = new GetGroupTypeDetailsQuery()
+            {
+                Id = id
+            };
+            var vm = await Mediator.Send(query);
+            return View(vm);
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreateGroupType(CreateGroupTypeDto request)
@@ -73,6 +83,13 @@ namespace Diploma.WebApi.Controllers
             var command = _mapper.Map<EditGroupTypeCommand>(editGroupTypeDto);
             await Mediator.Send(command);
 
+            return RedirectToAction("index");
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteGroupType(int id)
+        {
+            var command = new DeleteGroupTypeCommand() { Id = id };
+            await Mediator.Send(command);
             return RedirectToAction("index");
         }
 
