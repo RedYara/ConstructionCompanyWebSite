@@ -5,6 +5,8 @@
 		<Nullable>enable</Nullable>
 		<NoWarn>1591, 8602, 8618, 8601</NoWarn>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>3e3d8b27-7c6f-42e1-b029-b91436761782</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -48,6 +50,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.16" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
 		<PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.7" />
 	</ItemGroup>
 

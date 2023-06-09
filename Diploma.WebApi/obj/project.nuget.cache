@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "04aBGTKJ0Q/Ak6ftYKjxop3CcsqYYrx3IqDXLUvOnVwAHR2aRSgPTmOPvR3U6FLAZplRGEFzC9qYSsZuLyKOMA==",
+  "dgSpecHash": "Qcb8PZk5FXBWAifw1aP6I5+vqPr7mgWor4sKPJjXOqVFen2z792e8Wls4JLK97CiiuoYXB84BHAovfgVRzE6Rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.extensions.webencoders\\2.2.0\\microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\yarud\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\mimekit\\4.0.0\\mimekit.4.0.0.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\nonfactors.grid.core.mvc6\\7.1.0\\nonfactors.grid.core.mvc6.7.1.0.nupkg.sha512",

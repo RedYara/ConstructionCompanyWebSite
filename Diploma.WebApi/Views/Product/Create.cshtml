@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="app-container container-fluid" style="margin-top:3%">
+<div class="app-container container-fluid" >
     <h3 class="text-center">Добавление продукта</h3>
 
     <form asp-action="CreateProduct" enctype="multipart/form-data" method="post">
@@ -24,8 +24,6 @@
                 <input asp-for="Preview" type="file" accept="image/*" class="form-control" />
                 @Html.ValidationMessageFor(m => m.Preview, "", new {@class = "text-danger"})
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="GroupTypeId" class="control-label">Тип группы продукта</label>
@@ -46,7 +44,9 @@
             </div>
             <!-- Add other input fields for properties here -->
         </div>
+        <div class="text-end">
         <button type="submit" class="btn btn-primary">Добавить</button>
+        </div>
     </form>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

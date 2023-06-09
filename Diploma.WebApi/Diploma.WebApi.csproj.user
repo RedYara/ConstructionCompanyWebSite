@@ -4,5 +4,10 @@
     <Controller_SelectedScaffolderID>MvcControllerWithContextScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ControllerDialogWidth>650</WebStackScaffolding_ControllerDialogWidth>
+    <ActiveDebugProfile>Diploma.WebApi</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\yarud\source\repos\DiplomaWork\Diploma.WebApi\Properties\PublishProfiles\registry.hub.docker.com_redyara.pubxml</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

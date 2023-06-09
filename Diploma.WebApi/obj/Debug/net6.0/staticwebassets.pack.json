@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\icon.ico",
+      "PackagePath": "staticwebassets\\icon.ico"
     },
     {
       "Id": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\images\\background.jpg",
@@ -275,6 +275,10 @@
     {
       "Id": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\Безымянный.png",
+      "PackagePath": "staticwebassets\\Безымянный.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Diploma.WebApi.Microsoft.AspNetCore.StaticWebAssets.props",

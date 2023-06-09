@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+Fu/29H1TB2u6nQ0L554DAL4xL1OIckU/yuFnjGQSic=",
+  "Hash": "HLYgM2uJ6XTpO8kYG6z+XhClf1TxyqQmwtXGafOajNM=",
   "Source": "Diploma.WebApi",
   "BasePath": "_content/Diploma.WebApi",
   "Mode": "Default",
@@ -680,12 +680,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\icon.ico",
       "SourceId": "Diploma.WebApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\",
       "BasePath": "_content/Diploma.WebApi",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "icon.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -694,7 +694,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\icon.ico"
     },
     {
       "Identity": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\images\\background.jpg",
@@ -1817,6 +1817,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\Безымянный.png",
+      "SourceId": "Diploma.WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\wwwroot\\",
+      "BasePath": "_content/Diploma.WebApi",
+      "RelativePath": "Безымянный.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Безымянный.png"
     }
   ]
 }

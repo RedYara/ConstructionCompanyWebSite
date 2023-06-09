@@ -36,7 +36,7 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery
                     GroupType = x.GroupType,
                 }).ToListAsync(cancellationToken)
             };
-            var reviewsList = await _dbContext.Reviews.Take(6).OrderByDescending(x => x.Date).ToListAsync();
+            var reviewsList = await _dbContext.Reviews.Take(4).OrderByDescending(x => x.Date).ToListAsync();
             buildingList.Reviews = reviewsList;
             return buildingList;
         }
