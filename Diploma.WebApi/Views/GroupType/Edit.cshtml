@@ -2,11 +2,12 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Редактирование группы";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="app-container container-fluid" >
-    <h3 class="text-center">Добавление дома</h3>
+    <h3 class="text-center">Редактирование группы</h3>
     
     <form asp-action="CreateGroupType" enctype="multipart/form-data" method="post">
         <div class="row">
@@ -17,7 +18,7 @@
             </div>
         </div>
         <div class="text-end">
-            <button type="submit" class="btn btn-primary mt-4">Добавить тип группы</button>
+            <button type="submit" class="btn btn-primary mt-4">Сохранить</button>
         </div>
     
     </form>

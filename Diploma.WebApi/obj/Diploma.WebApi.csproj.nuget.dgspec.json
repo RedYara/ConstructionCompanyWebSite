@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {}
+    "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
         "projectName": "Diploma.Application",
-        "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
-        "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\obj\\",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj"
               }
             }
           }
@@ -85,17 +85,17 @@
         }
       }
     },
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
         "projectName": "Diploma.Domain",
-        "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
-        "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Domain\\obj\\",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\Diploma.Domain.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,17 +150,17 @@
         }
       }
     },
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
         "projectName": "Diploma.EmailSender",
-        "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
-        "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\obj\\",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,11 +174,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
               },
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
               }
             }
           }
@@ -226,17 +226,17 @@
         }
       }
     },
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
         "projectName": "Diploma.Persistence",
-        "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
-        "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\obj\\",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -250,8 +250,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
               }
             }
           }
@@ -321,17 +321,17 @@
         }
       }
     },
-    "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {
+    "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+        "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
         "projectName": "Diploma.WebApi",
-        "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
-        "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\obj\\",
+        "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+        "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+        "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -345,14 +345,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
               },
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.EmailSender\\Diploma.EmailSender.csproj"
               },
-              "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
-                "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
+              "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj": {
+                "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj"
               }
             }
           }

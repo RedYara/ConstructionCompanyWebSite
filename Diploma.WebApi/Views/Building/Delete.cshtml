@@ -1,6 +1,7 @@
 ﻿@model Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery.BuildingDetailsVm
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Удаление строения";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -19,7 +20,7 @@
 <input type="hidden" id="buildingId" value="@Model.Id" />
 <div class="app-container container-fluid">
     <div style="text-align:center">
-        <h1> Вы действительно хотите удалить? </h1>
+        <h1> Вы действительно хотите удалить строение? </h1>
     </div>
     <div class="row">
         <div class="col-md-6">

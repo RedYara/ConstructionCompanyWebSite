@@ -2316,19 +2316,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yarud\\.nuget\\packages\\": {}
+    "C:\\Users\\LattePanda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+      "projectUniqueName": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
       "projectName": "Diploma.Persistence",
-      "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
-      "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Persistence\\obj\\",
+      "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\Diploma.Persistence.csproj",
+      "packagesPath": "C:\\Users\\LattePanda\\.nuget\\packages\\",
+      "outputPath": "D:\\C# projects\\DiplomaWork\\Diploma.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yarud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LattePanda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2342,8 +2342,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
-              "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
+            "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj": {
+              "projectPath": "D:\\C# projects\\DiplomaWork\\Diploma.Application\\Diploma.Application.csproj"
             }
           }
         }

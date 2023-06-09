@@ -1,10 +1,11 @@
 ﻿@model Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery.OrderListVm;
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Список заказов";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="app-container container-fluid" >
+<div class="app-container container-fluid mt-4" >
     <div class="card">
         <div class="card-header">
             <p>Панель администратора</p>
@@ -42,7 +43,7 @@
             </div>
         </div>
     </div>
-    <table class="table">
+    <table class="table mt-4">
         <thead>
             <tr>
                 <th>
@@ -79,8 +80,8 @@
                         @Html.DropDownListFor(modelItem => item.Status, new SelectList(new[]{ new SelectListItem{Value = "В обработке", Text="В обработке"}, new SelectListItem{Value="Выполнен", Text="Выполнен"},new SelectListItem{Value="Отклонен", Text="Отклонен"}}, "Value", "Text"), new {@class = "form-control", id = "statusList", onchange=$"changeStatus({item.Id})"})
                     </td>
                     <td>
-                        <a asp-action="OrderComplete" asp-route-id="@item.Id" title="Заказ выполнен"><i class="fa-solid fa-check"></i></a>
-                        <a asp-controller="@(item.RowType == "0" ? "Building" : "Product")" asp-action="Details" asp-route-id="@item.RowId" title="Просмотреть заказ"><i class="fa-regular fa-eye"></i></a>
+                        <a asp-action="OrderComplete" asp-route-id="@item.Id" title="Заказ выполнен" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
+                        <a asp-controller="@(item.RowType == "0" ? "Building" : "Product")" asp-action="Details" asp-route-id="@item.RowId" title="Просмотреть заказ" class="btn btn-primary"><i class="fa-regular fa-eye"></i></a>
                     </td>
                 </tr>
             }
