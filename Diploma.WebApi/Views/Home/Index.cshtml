@@ -62,7 +62,7 @@
         @foreach (var building in Model.Buildings)
         {
             <a class="image-container" asp-controller="building" asp-action="details" asp-route-id="@building.Id" style="text-decoration:none; color:black;">
-                <img src="data:image/png;base64, @building.Preview" />
+                <img src="data:image/png;base64, @building.Preview" alt="BuildingPreview"/>
                 <div class="info-box-right">
                     @building.Name
                 </div>
