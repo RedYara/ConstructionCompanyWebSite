@@ -100,8 +100,7 @@
             </div>
         </div>
     }
-
-    <form method="post" asp-action="CreateReview">
+    <form class="createreview" method="post" asp-action="CreateReview">
         <div class="card mt-2">
             <div class="card-body">
                 <div class="rating">
@@ -112,7 +111,7 @@
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
 
-                <input type="hidden" id="rating" name="rating" value="0" required />
+                <input type="hidden" id="rating" class="rating-input" name="rating" value="0" />
 
                 <div>
                     <label for="text">Ваш отзыв:</label>
@@ -151,6 +150,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const stars = document.querySelectorAll(".rating .star");
+        const ratingInput = document.getElementById("rating");
 
         stars.forEach(function (star) {
             star.addEventListener("mouseover", function () {
@@ -170,13 +170,25 @@
 
             star.addEventListener("click", function () {
                 const ratingValue = this.getAttribute("data-value");
-                document.getElementById("rating").value = ratingValue;
+                ratingInput.value = ratingValue;
 
                 // Отображение выбранного рейтинга на звездах
                 stars.forEach(function (s) {
                     const value = s.getAttribute("data-value");
                     s.classList.toggle("selected", value <= ratingValue);
                 });
+            });
+        });
+
+        // Валидация выбора рейтинга перед отправкой формы
+        const forms = document.querySelectorAll("form");
+        forms.forEach(function (form) {
+            form.addEventListener("submit", function (event) {
+                const ratingInput = this.querySelector(".rating-input");
+                if (ratingInput.value === "0") {
+                    event.preventDefault();
+                    alert("Пожалуйста, выберите рейтинг.");
+                }
             });
         });
     });
