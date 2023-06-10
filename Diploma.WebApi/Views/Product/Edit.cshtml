@@ -2,11 +2,12 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Редактирование товара";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="app-container container-fluid" >
-    <h3 class="text-center">Редактирование продукта</h3>
+    <h3 class="text-center">Редактирование товара</h3>
 
     <form asp-action="EditProduct" enctype="multipart/form-data" method="post">
         @Html.HiddenFor(x => x.Id)

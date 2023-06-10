@@ -1,11 +1,12 @@
 ﻿@model Diploma.WebApi.Models.GroupType.CreateGroupTypeDto
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Добавление группы";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="app-container container-fluid" >
-    <h3 class="text-center">Добавление дома</h3>
+    <h3 class="text-center">Добавление группы</h3>
     
     <form asp-action="CreateGroupType" enctype="multipart/form-data" method="post">
         <div class="row">
