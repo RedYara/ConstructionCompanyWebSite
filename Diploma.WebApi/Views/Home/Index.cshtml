@@ -87,7 +87,14 @@
                     {
                         <span class="star @(review.Rating >= i ? "selected" : "")">&#9733;</span>
                     }
-                <p>@review.Text</p>
+                    <p>@review.Text</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-action="DeleteReview" class="text-end">
+                            <input type="hidden" value="@review.Id" name="id">
+                            <button type="submit" class="btn btn-danger" title="Удалить отзыв"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    }
                 </div>
             </div>
         </div>
@@ -104,11 +111,11 @@
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
 
-                <input type="hidden" id="rating" name="rating" value="0" />
+                <input type="hidden" id="rating" name="rating" value="0" required />
 
                 <div>
                     <label for="text">Ваш отзыв:</label>
-                    <textarea class="form-control" id="text" name="text"></textarea>
+                    <textarea class="form-control" id="text" name="text" required></textarea>
                 </div>
 
                 <div class="text-end mt-2">
