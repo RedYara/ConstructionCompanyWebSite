@@ -54,7 +54,7 @@ namespace Diploma.WebApi.Controllers
             {
                 Id = id
             };
-            var vm = await Mediator.Send(query); 
+            var vm = await Mediator.Send(query);
             return View(vm);
         }
 
@@ -103,11 +103,11 @@ namespace Diploma.WebApi.Controllers
         public IActionResult Catalog(string sortBy, int? page, string search)
         {
             var buildings = _dbContext.Buildings.ToList();
-            foreach(var building in buildings)
+            foreach (var building in buildings)
             {
-                if (building.Desciption.Length < 100) 
+                if (building.Desciption.Length < 100)
                     building.Desciption = building.Desciption.Substring(0, building.Desciption.Length);
-                else 
+                else
                     building.Desciption = building.Desciption.Substring(0, 100);
             }
             ViewBag.SortBy = sortBy;
@@ -142,7 +142,7 @@ namespace Diploma.WebApi.Controllers
 
             int pageNumber = page ?? 1;
             int pageSize = 10;
-            var pagedBuildings = buildings.ToPagedList(pageNumber, pageSize);
+            var pagedBuildings = buildings.OrderByDescending(x => x.CreateTime).ToPagedList(pageNumber, pageSize);
 
             return View(pagedBuildings);
         }

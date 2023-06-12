@@ -1,12 +1,6 @@
 ﻿using Diploma.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Diploma.Application.CQRS.Commands.Order.ChangeOrderStatus
 {

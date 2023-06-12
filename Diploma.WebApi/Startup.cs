@@ -1,9 +1,9 @@
 ﻿using Diploma.Application;
 using Diploma.Application.Common.Mappings;
+using Diploma.Application.Interfaces;
+using Diploma.EmailSender;
 using Diploma.Persistence;
 using System.Reflection;
-using Diploma.EmailSender;
-using Diploma.Application.Interfaces;
 
 namespace Diploma.WebApi
 {

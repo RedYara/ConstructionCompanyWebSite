@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Diploma.Application.Common.Mappings;
-using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
 using Diploma.Domain;
 
 namespace Diploma.Application.CQRS.Queries.Orders.GetOrderDetails

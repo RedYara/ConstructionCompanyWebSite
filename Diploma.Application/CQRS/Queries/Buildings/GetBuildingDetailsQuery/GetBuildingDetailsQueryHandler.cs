@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using Diploma.Application.CQRS.Queries.Orders.GetOrderDetails;
 using Diploma.Application.Interfaces;
-using Diploma.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +15,7 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery
             _mapper = mapper;
         }
 
-        public async Task<BuildingDetailsVm> Handle (GetBuildingDetailsQuery request, CancellationToken cancellationToken)
+        public async Task<BuildingDetailsVm> Handle(GetBuildingDetailsQuery request, CancellationToken cancellationToken)
         {
             var building = await _dbContext.Buildings.Include(x => x.Comments).Include(x => x.GroupType).FirstOrDefaultAsync(x => x.Id == request.Id);
 

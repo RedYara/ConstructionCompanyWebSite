@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.Common.Mappings;
 using Diploma.Application.CQRS.Commands.Product.CreateProduct;
-using Diploma.WebApi.Models.Building;
 using System.ComponentModel.DataAnnotations;
 
 namespace Diploma.WebApi.Models.Product

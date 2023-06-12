@@ -1,8 +1,8 @@
-﻿using MailKit.Net.Smtp;
-using MimeKit;
+﻿using Diploma.Application.Interfaces;
+using MailKit.Net.Smtp;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Diploma.Application.Interfaces;
+using MimeKit;
 
 namespace Diploma.EmailSender
 {

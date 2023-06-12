@@ -4,7 +4,6 @@ using Diploma.Application.CQRS.Commands.Product.DeleteProduct;
 using Diploma.Application.CQRS.Commands.Product.EditProduct;
 using Diploma.Application.CQRS.Queries.Products.GetProductDetailsQuery;
 using Diploma.Application.CQRS.Queries.Products.GetProductListQuery;
-using Diploma.Domain;
 using Diploma.Persistence;
 using Diploma.WebApi.Models.Product;
 using Microsoft.AspNetCore.Authorization;
@@ -143,7 +142,7 @@ namespace Diploma.WebApi.Controllers
 
             int pageNumber = page ?? 1;
             int pageSize = 10;
-            var pagedProducts = products.ToPagedList(pageNumber, pageSize);
+            var pagedProducts = products.OrderByDescending(x => x.CreateTime).ToPagedList(pageNumber, pageSize);
 
             return View(pagedProducts);
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qcb8PZk5FXBWAifw1aP6I5+vqPr7mgWor4sKPJjXOqVFen2z792e8Wls4JLK97CiiuoYXB84BHAovfgVRzE6Rw==",
+  "dgSpecHash": "NRsjLj6K4EHhhTwJ/TK+tpRterDzdZgb24Nq/bU60aa7PfwutmWWL3vJZxkNYpuw35wbzqi/fiExUJuHY/fBRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yarud\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\yarud\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

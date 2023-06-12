@@ -37,7 +37,8 @@ namespace Diploma.Application.CQRS.Commands.Building.CreateBuilding
                 Preview = previewIconBase64,
                 Size = request.Size,
                 Square = request.Square,
-                GroupType = await _dbContext.GroupTypes.FirstOrDefaultAsync(x => x.Id == request.GroupTypeId)
+                GroupType = await _dbContext.GroupTypes.FirstOrDefaultAsync(x => x.Id == request.GroupTypeId),
+                CreateTime = DateTime.Now
             };
 
             await _dbContext.Buildings.AddAsync(building);

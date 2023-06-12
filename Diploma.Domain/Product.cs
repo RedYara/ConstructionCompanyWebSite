@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Diploma.Domain
+﻿namespace Diploma.Domain
 {
     public class Product
     {
@@ -15,6 +9,7 @@ namespace Diploma.Domain
         public GroupType GroupType { get; set; }
         public int Price { get; set; }
         public ICollection<Comment> Comments { get; set; }
+        public DateTime CreateTime { get; set; }
 
     }
 }

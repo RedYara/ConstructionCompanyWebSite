@@ -1,11 +1,6 @@
 ﻿using Diploma.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diploma.Application.CQRS.Commands.Building.EditBuilding
 {
@@ -44,10 +39,10 @@ namespace Diploma.Application.CQRS.Commands.Building.EditBuilding
                 using MemoryStream previewMs = new();
                 request.Preview.CopyTo(previewMs);
                 var fileBytesPreview = previewMs.ToArray();
-                var previewIconBase64 = Convert.ToBase64String(fileBytesPreview); 
+                var previewIconBase64 = Convert.ToBase64String(fileBytesPreview);
                 building.Preview = previewIconBase64;
             }
-                
+
 
             if (building.Desciption != request.Desciption)
                 building.Desciption = request.Desciption;

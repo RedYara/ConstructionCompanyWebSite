@@ -2,11 +2,6 @@
 using Diploma.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diploma.Application.CQRS.Commands.Product.CreateProduct
 {
@@ -36,6 +31,7 @@ namespace Diploma.Application.CQRS.Commands.Product.CreateProduct
                 Name = request.Name,
                 Preview = previewIconBase64,
                 Price = request.Price,
+                CreateTime = DateTime.Now
             };
 
 

@@ -15,5 +15,6 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery
         public ICollection<Comment> Comments { get; set; }
         public string Size { get; set; }
         public int Floors { get; set; }
+        public DateTime CreateTime { get; set; }
     }
 }

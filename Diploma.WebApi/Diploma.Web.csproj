@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<NoWarn>1591, 8602, 8618, 8601</NoWarn>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>3e3d8b27-7c6f-42e1-b029-b91436761782</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+	  <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="CoreAdmin" Version="2.7.0" />
+		<PackageReference Include="FluentEmail.Core" Version="3.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.16" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+		<PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Diploma.Application\Diploma.Application.csproj" />
+		<ProjectReference Include="..\Diploma.EmailSender\Diploma.EmailSender.csproj" />
+		<ProjectReference Include="..\Diploma.Persistence\Diploma.Persistence.csproj" />
+		<ProjectReference Include="..\Diploma.EmailSender\Diploma.EmailSender.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="Views\Building\Create.cshtml">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+</Project>

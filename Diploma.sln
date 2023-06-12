@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.Application", "Dipl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.Persistence", "Diploma.Persistence\Diploma.Persistence.csproj", "{2DFAECE0-CD95-4BB8-AA73-F4676F09F9CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.WebApi", "Diploma.WebApi\Diploma.WebApi.csproj", "{31F08285-9731-442C-A395-B7A05ED33D7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.Web", "Diploma.WebApi\Diploma.Web.csproj", "{31F08285-9731-442C-A395-B7A05ED33D7A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diploma.EmailSender", "Diploma.EmailSender\Diploma.EmailSender.csproj", "{121D8579-49FE-420A-899B-D6BA59CDE7EC}"
 EndProject

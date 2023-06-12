@@ -1,12 +1,6 @@
 ﻿using Diploma.Application.CQRS.Commands.Comment.AddCommentComand;
 using Diploma.Application.Interfaces;
-using Diploma.Domain;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diploma.Application.CQRS.Commands.Comment.CreateComment
 {
@@ -19,19 +13,19 @@ namespace Diploma.Application.CQRS.Commands.Comment.CreateComment
         }
         public async Task<bool> Handle(CreateCommentComand request, CancellationToken cancellationToken)
         {
-                var building = _dbContext.Buildings.FirstOrDefault(x => x.Id == request.BuildingId);
-                if (building.Comments == null)
-                {
-                    building.Comments = new List<Domain.Comment>();
-                }
-                building.Comments.Add(new Domain.Comment
-                {
-                    BuildingId = request.BuildingId,
-                    Content = request.Content,
-                    Email = request.Email,
-                    Name = request.Name,
-                });
-                await _dbContext.SaveChangesAsync(cancellationToken);
+            var building = _dbContext.Buildings.FirstOrDefault(x => x.Id == request.BuildingId);
+            if (building.Comments == null)
+            {
+                building.Comments = new List<Domain.Comment>();
+            }
+            building.Comments.Add(new Domain.Comment
+            {
+                BuildingId = request.BuildingId,
+                Content = request.Content,
+                Email = request.Email,
+                Name = request.Name,
+            });
+            await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
     }

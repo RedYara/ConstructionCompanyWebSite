@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Diploma.Application.Common.Mappings;
-using Diploma.Application.CQRS.Commands.Building.EditBuilding;
 using Diploma.Application.CQRS.Commands.Product.EditProduct;
-using Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery;
 using Diploma.Application.CQRS.Queries.Products.GetProductDetailsQuery;
 using System.ComponentModel.DataAnnotations;
 

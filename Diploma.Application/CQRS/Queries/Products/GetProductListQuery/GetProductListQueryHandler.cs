@@ -1,11 +1,6 @@
 ﻿using Diploma.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diploma.Application.CQRS.Queries.Products.GetProductListQuery
 {
@@ -30,8 +25,10 @@ namespace Diploma.Application.CQRS.Queries.Products.GetProductListQuery
                     Description = x.Description,
                     Price = x.Price,
                     GroupTypeId = x.GroupType.Id,
-                    Preview = x.Preview
-                }).ToListAsync(cancellationToken)
+                    Preview = x.Preview,
+                    CreateTime = x.CreateTime
+                }).OrderByDescending(x => x.CreateTime)
+                .ToListAsync(cancellationToken)
             };
 
             return productList;

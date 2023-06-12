@@ -2872,9 +2872,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
-      "projectName": "Diploma.WebApi",
-      "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.Web.csproj",
+      "projectName": "Diploma.Web",
+      "projectPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\Diploma.Web.csproj",
       "packagesPath": "C:\\Users\\yarud\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\yarud\\source\\repos\\DiplomaWork\\Diploma.WebApi\\obj\\",
       "projectStyle": "PackageReference",

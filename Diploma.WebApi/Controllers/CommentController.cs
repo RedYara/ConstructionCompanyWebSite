@@ -1,7 +1,6 @@
 ﻿using Diploma.Application.CQRS.Commands.Comment.AddCommentComand;
 using Diploma.Application.CQRS.Commands.Comment.DeleteComment;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Diploma.WebApi.Controllers
@@ -22,7 +21,7 @@ namespace Diploma.WebApi.Controllers
                 Name = Name,
                 BuildingType = BuildingType
             };
-            await Mediator.Send(command); 
+            await Mediator.Send(command);
             string urlReferrer = Request.Headers["Referer"].ToString();
 
             return Redirect(urlReferrer);

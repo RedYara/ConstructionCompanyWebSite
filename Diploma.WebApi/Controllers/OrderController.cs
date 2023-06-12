@@ -4,7 +4,6 @@ using Diploma.Application.CQRS.Commands.Order.CreateOrder;
 using Diploma.Application.CQRS.Commands.Order.DeleteOrder;
 using Diploma.Application.CQRS.Queries.Orders.GetOrderListQuery;
 using Diploma.Application.Interfaces;
-using Diploma.Domain;
 using Diploma.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -51,9 +50,9 @@ namespace Diploma.WebApi.Controllers
                 Phone = phone,
                 rowType = rowType,
                 Email = email
-                
+
             };
-            await Mediator.Send(query); 
+            await Mediator.Send(query);
             string domainName = Request.Scheme + "://" + Request.Host;
             await _mailSender.SendEmailAsync("yarudkorolev@gmail.com", "Создан заказ", $"Создан заказ, номер телефона: {phone}, имя заказчика: {name} ");
             await _mailSender.SendEmailAsync(email, $"Информация по заказу", $"Ваш заказ находится в обработке, ожидайте обратной связи.");
@@ -61,7 +60,7 @@ namespace Diploma.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> OrderComplete (int Id)
+        public async Task<IActionResult> OrderComplete(int Id)
         {
             var query = new DeleteOrderCommand() { Id = Id };
             await Mediator.Send(query);

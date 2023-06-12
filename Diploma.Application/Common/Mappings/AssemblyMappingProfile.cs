@@ -20,6 +20,5 @@ namespace Diploma.Application.Common.Mappings
                 methodInfo?.Invoke(instance, new object[] { this });
             }
         }
-
     }
 }

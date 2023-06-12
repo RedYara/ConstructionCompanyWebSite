@@ -1,16 +1,10 @@
 ﻿using Diploma.Application.Interfaces;
-using Diploma.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery
 {
-    public class GetBuildingsListQueryHandler : IRequestHandler<GetBuildingsListQuery,BuildingListVm>
+    public class GetBuildingsListQueryHandler : IRequestHandler<GetBuildingsListQuery, BuildingListVm>
     {
         private readonly IDiplomaDbContext _dbContext;
         public GetBuildingsListQueryHandler(IDiplomaDbContext dbContext)
@@ -18,7 +12,7 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery
             _dbContext = dbContext;
         }
 
-        public async Task<BuildingListVm> Handle (GetBuildingsListQuery request, CancellationToken cancellationToken)
+        public async Task<BuildingListVm> Handle(GetBuildingsListQuery request, CancellationToken cancellationToken)
         {
             var buildings = _dbContext.Buildings;
             var buildingList = new BuildingListVm
@@ -34,8 +28,10 @@ namespace Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery
                     Size = x.Size,
                     Square = x.Square,
                     GroupType = x.GroupType,
-                }).ToListAsync(cancellationToken)
-            };
+                    CreateTime = x.CreateTime,
+                }).OrderByDescending(x => x.CreateTime)
+                .ToListAsync()
+        };
             var reviewsList = await _dbContext.Reviews.Take(4).OrderByDescending(x => x.Date).ToListAsync();
             buildingList.Reviews = reviewsList;
             return buildingList;

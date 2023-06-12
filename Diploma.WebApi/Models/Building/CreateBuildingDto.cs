@@ -20,7 +20,7 @@ namespace Diploma.WebApi.Models.Building
         [Required(ErrorMessage = "Введите площадь строения")]
         [RegularExpression(@"^[-+]?\d+(\.\d+)?$", ErrorMessage = "Можно вводить только числа")]
         public string Square { get; set; }
-        [Required(ErrorMessage = "Введите размерность строения")]
+        [Required(ErrorMessage = "Ввод формата \"100x100\"")]
         [RegularExpression(@"^\d+x\d+$", ErrorMessage = "Можно вводить только числа")]
         public string Size { get; set; }
         [Required(ErrorMessage = "Введите количество этажей")]

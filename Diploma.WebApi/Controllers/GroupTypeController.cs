@@ -1,23 +1,13 @@
 ﻿using AutoMapper;
-using Diploma.Application.CQRS.Commands.Building.CreateBuilding;
-using Diploma.Application.CQRS.Commands.Building.EditBuilding;
 using Diploma.Application.CQRS.Commands.GroupType.CreateGroupType;
 using Diploma.Application.CQRS.Commands.GroupType.DeleteGroupType;
-using Diploma.Application.CQRS.Queries.Buildings.GetBuildingDetailsQuery;
-using Diploma.Application.CQRS.Queries.Buildings.GetBuildingsListQuery;
-using Diploma.Application.CQRS.Queries.GroupTypes;
 using Diploma.Application.CQRS.Queries.GroupTypes.GetGroupTypeDetailsQuery;
 using Diploma.Application.CQRS.Queries.GroupTypes.GetGroupTypeListQuery;
-using Diploma.Domain;
 using Diploma.Persistence;
 using Diploma.WebApi.Models.Building;
 using Diploma.WebApi.Models.GroupType;
-using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Asn1.Ocsp;
-using System.Text.RegularExpressions;
 
 namespace Diploma.WebApi.Controllers
 {
@@ -103,7 +93,7 @@ namespace Diploma.WebApi.Controllers
         [HttpPost]
         public async Task CreateGroupTypeAjax(string Name)
         {
-            var command = _mapper.Map<CreateGroupTypeCommand>(new CreateGroupTypeDto() { Name = Name});
+            var command = _mapper.Map<CreateGroupTypeCommand>(new CreateGroupTypeDto() { Name = Name });
             await Mediator.Send(command);
         }
     }
